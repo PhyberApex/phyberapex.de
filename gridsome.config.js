@@ -5,6 +5,25 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
-  plugins: []
+  siteName: 'PhyberApex',
+  templates: {
+    Portfolio: '/project/:title',
+    Tag: '/tag/:id'
+  },
+  plugins: [{
+    use: '@gridsome/source-filesystem',
+    options: {
+      typeName: 'Portfolio',
+      path: 'content/works/*.md',
+      refs: {
+        tags: {
+          typeName: 'Tag',
+          create: true
+        }
+      }
+    }
+  }],
+  transformers: {
+    remark: {}
+  }
 }
