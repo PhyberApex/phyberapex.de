@@ -15,7 +15,7 @@ deploy-prod:
     - npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
 
 deploy-draft:
-  stage: draft
+  stage: deploy
   environment:
     name: draft
   only:
