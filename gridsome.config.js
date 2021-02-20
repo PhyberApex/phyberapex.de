@@ -1,28 +1,29 @@
 // This is where project configuration and plugin options are located.
 // Learn more: https://gridsome.org/docs/config
 
-// Changes here require a server restart.
+// Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'PhyberApex',
-  plugins: [{
-    use: 'gridsome-source-sanity',
-    options: {
-      projectId: `${process.env.SANITY_PROJECT_ID}`,
-      dataset: `${process.env.SANITY_DATASET}`,
-      // Token is only required if dataset is private
-      // or `overlayDrafts` is set to true
-      token: `${process.env.SANITY_TOKEN}`,
-      overlayDrafts: false,
-      watchMode: false,
+  siteName: 'Gridsome Blog Starter',
+  siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.',
 
-      // If the Sanity GraphQL API was deployed using `--tag <name>`,
-      // use `graphqlTag` to specify the tag name. Defaults to `default`.
-      graphqlTag: 'default',
-  }
-  }],
-  transformers: {
-    remark: {}
-  }
+  templates: {
+    GhostPost: '/:title',
+    GhostTag: '/tag/:id'
+  },
+
+  plugins: [
+    {
+      use: '@gridsome/source-ghost',
+      options: {
+        baseUrl: 'http://ghost.sabisu-sama.phyberhome',
+        contentKey: `${process.env.GHOST_CONTENT_KEY}`,
+        routes: {
+          post: '/:slug',
+          page: '/:slug'
+        }
+      }
+    }
+  ]
 }
