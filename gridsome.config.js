@@ -5,6 +5,24 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
-  plugins: []
+  siteName: 'PhyberApex',
+  plugins: [{
+    use: 'gridsome-source-sanity',
+    options: {
+      projectId: `${process.env.SANITY_PROJECT_ID}`,
+      dataset: `${process.env.SANITY_DATASET}`,
+      // Token is only required if dataset is private
+      // or `overlayDrafts` is set to true
+      // token: '<tokenWithReadRights>',
+      overlayDrafts: false,
+      watchMode: false,
+
+      // If the Sanity GraphQL API was deployed using `--tag <name>`,
+      // use `graphqlTag` to specify the tag name. Defaults to `default`.
+      graphqlTag: 'default',
+  }
+  }],
+  transformers: {
+    remark: {}
+  }
 }
