@@ -13,7 +13,7 @@ module.exports = {
       dataset: `${process.env.SANITY_DATASET}`,
       // Token is only required if dataset is private
       // or `overlayDrafts` is set to true
-      // token: '<tokenWithReadRights>',
+      token: `${process.env.SANITY_TOKEN}`,
       overlayDrafts: false,
       watchMode: false,
 
