@@ -1,20 +1,20 @@
 {
-  "name": "phyberapex.d",
-  "private": true,
+  "name": "phyberapex.de",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "gridsome build",
-    "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
-  "dependencies": {
-    "@gridsome/plugin-google-analytics": "^0.1.0",
-    "@gridsome/remark-prismjs": "^0.2.0",
-    "@gridsome/source-ghost": "^0.4.0",
-    "@gridsome/transformer-remark": "^0.3.0",
-    "gridsome": "^0.7.0"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.0"
+    "@vuepress/bundler-vite": "2.0.0-rc.15",
+    "@vuepress/theme-default": "2.0.0-rc.43",
+    "sass-embedded": "^1.78.0",
+    "vue": "^3.5.6",
+    "vuepress": "2.0.0-rc.15"
   }
 }
