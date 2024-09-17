@@ -1,10 +1,12 @@
 ---
 home: true
+title: Home
 heroImage: /images/phyberapex-logo.png
 heroText: PhyberApex
 tagline: Software Engineering PMTS at Salesforce
-actionText: About Me →
-actionLink: /about
+actions:
+  - text: About Me →
+    link: /about
 features:
 - title: Fullstack Dev
   details: Specializing in front-end development with full-stack capabilities
