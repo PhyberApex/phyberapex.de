@@ -7,4 +7,4 @@
 ![vuepress](https://img.shields.io/badge/vuepress-v2.x-green)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/PhyberApex/phyberapex.de)
 
-This is the repo for my website. Created with VuePress.
+This is the repository for my personal website [phyberapex.de](https://phyberapex.de)
