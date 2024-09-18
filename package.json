@@ -1,7 +1,7 @@
 {
   "name": "phyberapex.de",
   "version": "1.0.0",
-  "description": "",
+  "description": "VuePress app for phyberapex.de",
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.15",
     "@vuepress/theme-default": "2.0.0-rc.43",
