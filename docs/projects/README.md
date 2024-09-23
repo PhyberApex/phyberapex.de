@@ -15,11 +15,11 @@ Welcome to my project showcase! Here you'll find an overview of my personal proj
 
 ## Personal Projects
 
-- [LobbyBinghoe](./projects/lobbybinghoe)
-- [TypeScript Lightning Talks](./projects/typescript-talks)
-- [KnowledgeNG](./projects/knowledgeng)
-- [Diary of Legends](./projects/diary-of-legends)
-- [League of Legends API Wrapper](./projects/lol-api-wrapper)
+- [LobbyBinghoe](./lobbybinghoe)
+- [TypeScript Lightning Talks](./typescript-talks)
+- [KnowledgeNG](./knowledgeng)
+- [Diary of Legends](./diary-of-legends)
+- [League of Legends API Wrapper](./lol-api-wrapper)
 
 ## Project Evolution
 
