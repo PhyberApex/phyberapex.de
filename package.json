@@ -8,13 +8,13 @@
     "build": "vuepress build docs"
   },
   "keywords": [],
-  "author": "",
+  "author": "Janis Walliser",
   "license": "MIT",
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.15",
     "@vuepress/theme-default": "2.0.0-rc.49",
-    "sass-embedded": "^1.78.0",
-    "vue": "^3.5.6",
+    "sass-embedded": "1.79.3",
+    "vue": "3.5.8",
     "vuepress": "2.0.0-rc.15"
   }
 }
