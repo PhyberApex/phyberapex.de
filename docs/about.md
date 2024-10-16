@@ -1,10 +1,16 @@
 ---
 title: About PhyberApex
-description: Meet the code wizard, Vue.js enthusiast, security expert, board game lover, and miniature artist behind the pixels
+description: Meet the code wizard, Vue.js enthusiast, security expert, board game lover, miniature artist, and family man behind the pixels
 contributors: false
 ---
 
 # About PhyberApex
+
+<div class="image-grid">
+  <img src="/api/placeholder/400/300" alt="PhyberApex at work" class="about-image" />
+  <img src="/api/placeholder/400/300" alt="PhyberApex gaming" class="about-image" />
+  <img src="/api/placeholder/400/300" alt="PhyberApex painting miniatures" class="about-image" />
+</div>
 
 ## The Professional: Code Conjurer & Security Sentinel 🧙‍♂️🛡️
 
@@ -51,13 +57,29 @@ My collection of video game OSTs on vinyl is my pride and joy. Current favorite 
 Armed with brushes and paints, I meticulously craft miniature masterpieces. Each figurine tells a story, frozen in time and acrylic.
 
 ### 😺 Salesforce Plushie Collector
-Yes, you read that right! I have an ever-growing collection of Salesforce mascot plushies. Current count: [Insert number] (and growing!)
+Yes, you read that right! I have an ever-growing collection of Salesforce mascot plushies. Current count: 16 (and growing!)
+
+## The Family Man: My Support System ❤️🏠
+
+When I'm not immersed in code or geeking out over board games, my heart belongs to my amazing family:
+
+- 👩‍❤️‍👨 My incredible wife, who supports me in everything I do. She's my rock and my biggest cheerleader.
+- 👦 A teenage son who keeps me on my toes and reminds me daily how fast time flies.
+- 👧 A young child who fills our home with laughter and wonder, teaching me to see the world through fresh eyes.
+- 🐕 And last but not least, our family mascot - Morty, our 7-year-old golden retriever. He's not just a pet; he's a full-fledged family member who even joins me for couples costumes during Halloween!
+
+<div class="image-grid">
+  <img src="/api/placeholder/400/300" alt="PhyberApex and Morty Halloween Costume 1" class="about-image" />
+  <img src="/api/placeholder/400/300" alt="PhyberApex and Morty Halloween Costume 2" class="about-image" />
+</div>
+
+My family is the reason I strive to be better every day, both personally and professionally. They inspire me, ground me, and remind me of what's truly important in life.
 
 ## My Philosophy
 
-> "In both code and games, it's all about solving puzzles, creating experiences, and ensuring a safe environment for all players."
+> "In code, games, and family life, it's all about solving puzzles, creating experiences, and cherishing every moment."
 
-This philosophy reminds me that whether I'm developing a secure Vue.js application, diving deep into TypeScript, or playing a board game, I'm always engaged in problem-solving, creating memorable experiences, and maintaining a secure and fair playing field.
+This philosophy guides me through the complexities of software development, the excitement of gaming, and the joys and challenges of family life.
 
 ## Let's Connect!
 
@@ -73,3 +95,30 @@ I'm always up for a good conversation. Here's how you can reach me:
 - 💻 **GitHub**: [Check out my projects on GitHub](https://github.com/PhyberApex)
 
 Feel free to reach out, and let's make both the digital and analog worlds a little more awesome and secure, one interaction at a time!
+
+<style>
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
