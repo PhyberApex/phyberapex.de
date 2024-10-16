@@ -7,13 +7,7 @@ contributors: false
 # About PhyberApex
 
 <div class="image-grid">
-
-[//]: # (  <img src="/api/placeholder/400/300" alt="PhyberApex at work" class="about-image" />)
-
-[//]: # (  <img src="/api/placeholder/400/300" alt="PhyberApex gaming" class="about-image" />)
-
-[//]: # (  <img src="/api/placeholder/400/300" alt="PhyberApex painting miniatures" class="about-image" />)
-
+  <img src="/images/me1.jpg" alt="PhyberApex at work" class="about-image" />
 </div>
 
 ## The Professional: Code Conjurer & Security Sentinel 🧙‍♂️🛡️
@@ -73,11 +67,8 @@ When I'm not immersed in code or geeking out over board games, my heart belongs 
 - 🐕 And last but not least, our family mascot - Morty, our 7-year-old golden retriever. He's not just a pet; he's a full-fledged family member who even joins me for couples costumes during Halloween!
 
 <div class="image-grid">
-
-[//]: # (  <img src="/api/placeholder/400/300" alt="PhyberApex and Morty Halloween Costume 1" class="about-image" />)
-
-[//]: # (  <img src="/api/placeholder/400/300" alt="PhyberApex and Morty Halloween Costume 2" class="about-image" />)
-
+  <img src="/images/morty1.jpg" alt="PhyberApex and Morty Halloween Costume 1" class="about-image" />
+  <img src="/images/morty2.jpeg" alt="PhyberApex and Morty Halloween Costume 1" class="about-image" />
 </div>
 
 My family is the reason I strive to be better every day, both personally and professionally. They inspire me, ground me, and remind me of what's truly important in life.
