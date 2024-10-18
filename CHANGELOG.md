@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/PhyberApex/phyberapex.de/compare/v1.2.0...v1.2.1) (2024-10-18)
+
+
+### Bug Fixes
+
+* Update dependency @vuepress/theme-default to v2.0.0-rc.55 ([#34](https://github.com/PhyberApex/phyberapex.de/issues/34)) ([57f0da7](https://github.com/PhyberApex/phyberapex.de/commit/57f0da719fc24c8e8cec49f1381ae034686e51be))
+* Update dependency sass-embedded to v1.80.2 ([#36](https://github.com/PhyberApex/phyberapex.de/issues/36)) ([0178585](https://github.com/PhyberApex/phyberapex.de/commit/0178585271b063cd434f44bf54152a342a8a3159))
+
 ## [1.2.0](https://github.com/PhyberApex/phyberapex.de/compare/v1.1.1...v1.2.0) (2024-10-16)
 
 
