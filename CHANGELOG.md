@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.3.0](https://github.com/PhyberApex/phyberapex.de/compare/v1.2.1...v1.3.0) (2024-11-02)
+
+
+### Features
+
+* Added Halloween 2024 picture ([a11d77b](https://github.com/PhyberApex/phyberapex.de/commit/a11d77b596cf37d1537f1f11958d04ff585b29fe))
+
+
+### Bug Fixes
+
+* Fixed extension of image ([479b721](https://github.com/PhyberApex/phyberapex.de/commit/479b72164be39648a99928201904e9aa2ea09f66))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.57 ([#40](https://github.com/PhyberApex/phyberapex.de/issues/40)) ([746448f](https://github.com/PhyberApex/phyberapex.de/commit/746448fb47558bec58be617558013fb70a2255e1))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.58 ([#42](https://github.com/PhyberApex/phyberapex.de/issues/42)) ([2262fec](https://github.com/PhyberApex/phyberapex.de/commit/2262fec3375f5ed1f214a9439b306b33d9d0c9aa))
+* Update dependency sass-embedded to v1.80.5 ([#43](https://github.com/PhyberApex/phyberapex.de/issues/43)) ([cac5869](https://github.com/PhyberApex/phyberapex.de/commit/cac586921c8dee13203baceca908866ac9190e10))
+* Update dependency sass-embedded to v1.80.6 ([#44](https://github.com/PhyberApex/phyberapex.de/issues/44)) ([9f1cd41](https://github.com/PhyberApex/phyberapex.de/commit/9f1cd41bd96a7e2dc1fb7cb4e3f69b2586bf3bba))
+
 ## [1.2.1](https://github.com/PhyberApex/phyberapex.de/compare/v1.2.0...v1.2.1) (2024-10-24)
 
 
