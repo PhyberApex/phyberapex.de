@@ -69,7 +69,7 @@ When I'm not immersed in code or geeking out over board games, my heart belongs 
 <div class="image-grid">
   <img src="/images/morty1.jpg" alt="PhyberApex and Morty Halloween Costume 1" class="about-image" />
   <img src="/images/morty2.jpeg" alt="PhyberApex and Morty Halloween Costume 2" class="about-image" />
-  <img src="/images/morty3.jpeg" alt="PhyberApex and Morty Halloween Costume 3" class="about-image" />
+  <img src="/images/morty3.jpg" alt="PhyberApex and Morty Halloween Costume 3" class="about-image" />
 </div>
 
 My family is the reason I strive to be better every day, both personally and professionally. They inspire me, ground me, and remind me of what's truly important in life.
