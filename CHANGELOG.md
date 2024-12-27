@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.3.1](https://github.com/PhyberApex/phyberapex.de/compare/v1.3.0...v1.3.1) (2024-12-27)
+
+
+### Bug Fixes
+
+* Update dependency @vuepress/bundler-vite to v2.0.0-rc.19 ([#57](https://github.com/PhyberApex/phyberapex.de/issues/57)) ([9d84e97](https://github.com/PhyberApex/phyberapex.de/commit/9d84e972c7af051980e26757f791b77f898b63f8))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.60 ([#45](https://github.com/PhyberApex/phyberapex.de/issues/45)) ([6ead89f](https://github.com/PhyberApex/phyberapex.de/commit/6ead89f48f6c7f4b25152c87cfe9ef35b82cc42a))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.61 ([#50](https://github.com/PhyberApex/phyberapex.de/issues/50)) ([7f19f65](https://github.com/PhyberApex/phyberapex.de/commit/7f19f65b653c16c5e4fffa2f16a1116d0495a097))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.62 ([#53](https://github.com/PhyberApex/phyberapex.de/issues/53)) ([bd6426b](https://github.com/PhyberApex/phyberapex.de/commit/bd6426b255fe7b2462d0c89f351136aac5f64366))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.63 ([#54](https://github.com/PhyberApex/phyberapex.de/issues/54)) ([cf8547d](https://github.com/PhyberApex/phyberapex.de/commit/cf8547d827b1bb306e5608118d615d05fe6f6c62))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.64 ([#55](https://github.com/PhyberApex/phyberapex.de/issues/55)) ([7686c3f](https://github.com/PhyberApex/phyberapex.de/commit/7686c3f11909541c3a49c5df39f8f7110b603045))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.65 ([#56](https://github.com/PhyberApex/phyberapex.de/issues/56)) ([f3cbc0d](https://github.com/PhyberApex/phyberapex.de/commit/f3cbc0d6ac4e7c1444cfff4230f77f110d64c1ad))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.66 ([#60](https://github.com/PhyberApex/phyberapex.de/issues/60)) ([bd3ebce](https://github.com/PhyberApex/phyberapex.de/commit/bd3ebcef06d5f5f77fe94ce836d3a3ff0a2e8c87))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.68 ([#61](https://github.com/PhyberApex/phyberapex.de/issues/61)) ([547797a](https://github.com/PhyberApex/phyberapex.de/commit/547797a43fb4690a6dd88f5778e594a342787d36))
+* Update dependency sass-embedded to v1.80.7 ([#47](https://github.com/PhyberApex/phyberapex.de/issues/47)) ([1cf5190](https://github.com/PhyberApex/phyberapex.de/commit/1cf51909c1e04657f337f19e36b2c37ca41be31f))
+* Update dependency sass-embedded to v1.81.0 ([#48](https://github.com/PhyberApex/phyberapex.de/issues/48)) ([ed5dd17](https://github.com/PhyberApex/phyberapex.de/commit/ed5dd1702b3760847acf78d136a1a7ca7a700d55))
+* Update dependency sass-embedded to v1.81.1 ([#51](https://github.com/PhyberApex/phyberapex.de/issues/51)) ([e3b03f5](https://github.com/PhyberApex/phyberapex.de/commit/e3b03f535ae95ceb041a724e5c497bf3ec337d6b))
+* Update dependency sass-embedded to v1.82.0 ([#52](https://github.com/PhyberApex/phyberapex.de/issues/52)) ([09c4d31](https://github.com/PhyberApex/phyberapex.de/commit/09c4d31e7e1c89a62a9ded3856c0220db0e3ec57))
+* Update dependency sass-embedded to v1.83.0 ([#59](https://github.com/PhyberApex/phyberapex.de/issues/59)) ([3ddd4b2](https://github.com/PhyberApex/phyberapex.de/commit/3ddd4b25f19dfcb0e3458b98e4124d38f63772c4))
+* Update dependency vue to v3.5.13 ([#49](https://github.com/PhyberApex/phyberapex.de/issues/49)) ([98bb3dd](https://github.com/PhyberApex/phyberapex.de/commit/98bb3dd78332e681a092e3aab581b08595df1662))
+* Update dependency vuepress to v2.0.0-rc.19 ([#58](https://github.com/PhyberApex/phyberapex.de/issues/58)) ([96fbe98](https://github.com/PhyberApex/phyberapex.de/commit/96fbe98a927f07616ab48629d3af797ad12b7b79))
+
 ## [1.3.0](https://github.com/PhyberApex/phyberapex.de/compare/v1.2.1...v1.3.0) (2024-11-02)
 
 
