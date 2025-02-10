@@ -12,8 +12,8 @@ importers:
         specifier: 2.0.0-rc.19
         version: 2.0.0-rc.19(@types/node@22.5.5)(sass-embedded@1.83.4)
       '@vuepress/theme-default':
-        specifier: 2.0.0-rc.74
-        version: 2.0.0-rc.74(markdown-it@14.1.0)(sass-embedded@1.83.4)(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@22.5.5)(sass-embedded@1.83.4))(vue@3.5.13))
+        specifier: 2.0.0-rc.76
+        version: 2.0.0-rc.76(markdown-it@14.1.0)(sass-embedded@1.83.4)(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@22.5.5)(sass-embedded@1.83.4))(vue@3.5.13))
       sass-embedded:
         specifier: 1.83.4
         version: 1.83.4
@@ -712,8 +712,8 @@ packages:
   '@vuepress/shared@2.0.0-rc.19':
     resolution: {integrity: sha512-xaDeZxX0Qetc2Y6/lrzO6M/40i3LmMm7Fk85bOftBBOaNehZ24RdsmIHBJDDv+bTUv+DBF++1/mOtbt6DBRzEA==}
 
-  '@vuepress/theme-default@2.0.0-rc.74':
-    resolution: {integrity: sha512-bNm7Ey7u2dWe+8Mi2s6jvT2ccREqLQfzVjgfWPDpvGWXPXTCXLf/fBk7vKJ+YdFWq++SnMhqKyrsDMqdu2C7jg==}
+  '@vuepress/theme-default@2.0.0-rc.76':
+    resolution: {integrity: sha512-UyecPsfFvq8vP/bVZYx72aJgVE4hB+I6Myu7INGwXRbCK00QsNWFes3ssfjjt55PjoshyCeJprlqpGPy0xizYw==}
     peerDependencies:
       sass: ^1.80.3
       sass-embedded: ^1.80.3
@@ -2253,7 +2253,7 @@ snapshots:
     dependencies:
       '@mdit-vue/types': 2.1.0
 
-  '@vuepress/theme-default@2.0.0-rc.74(markdown-it@14.1.0)(sass-embedded@1.83.4)(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@22.5.5)(sass-embedded@1.83.4))(vue@3.5.13))':
+  '@vuepress/theme-default@2.0.0-rc.76(markdown-it@14.1.0)(sass-embedded@1.83.4)(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@22.5.5)(sass-embedded@1.83.4))(vue@3.5.13))':
     dependencies:
       '@vuepress/helper': 2.0.0-rc.74(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@22.5.5)(sass-embedded@1.83.4))(vue@3.5.13))
       '@vuepress/plugin-active-header-links': 2.0.0-rc.74(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@22.5.5)(sass-embedded@1.83.4))(vue@3.5.13))
