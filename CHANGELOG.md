@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.3.2](https://github.com/PhyberApex/phyberapex.de/compare/v1.3.1...v1.3.2) (2025-02-14)
+
+
+### Bug Fixes
+
+* Update dependency @vuepress/theme-default to v2.0.0-rc.69 ([#64](https://github.com/PhyberApex/phyberapex.de/issues/64)) ([ee46384](https://github.com/PhyberApex/phyberapex.de/commit/ee46384c99380e7886be0d5298c0fe391937d3dd))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.70 ([#65](https://github.com/PhyberApex/phyberapex.de/issues/65)) ([482b987](https://github.com/PhyberApex/phyberapex.de/commit/482b987a11f21a767e2ba4d8bd0f32f47fb85607))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.71 ([#67](https://github.com/PhyberApex/phyberapex.de/issues/67)) ([30d6c1d](https://github.com/PhyberApex/phyberapex.de/commit/30d6c1d299304683d680a032abe72699a98945a2))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.73 ([#68](https://github.com/PhyberApex/phyberapex.de/issues/68)) ([d424802](https://github.com/PhyberApex/phyberapex.de/commit/d4248021ff8cb0a4a9b7b3845346dcd162972328))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.74 ([#69](https://github.com/PhyberApex/phyberapex.de/issues/69)) ([85ce2f9](https://github.com/PhyberApex/phyberapex.de/commit/85ce2f98b28a561e8c2abb92b13a604a77e46be4))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.76 ([#70](https://github.com/PhyberApex/phyberapex.de/issues/70)) ([fbf32d9](https://github.com/PhyberApex/phyberapex.de/commit/fbf32d9383ce21f416cbef93b69bc9a880348547))
+* Update dependency sass-embedded to v1.83.1 ([#62](https://github.com/PhyberApex/phyberapex.de/issues/62)) ([b55cc1c](https://github.com/PhyberApex/phyberapex.de/commit/b55cc1c42f29f092fb1b36c3213f988e429cf430))
+* Update dependency sass-embedded to v1.83.4 ([#66](https://github.com/PhyberApex/phyberapex.de/issues/66)) ([cf09ae5](https://github.com/PhyberApex/phyberapex.de/commit/cf09ae5e67a37e69737da05948fa95945adb8563))
+* Update dependency sass-embedded to v1.85.0 ([#71](https://github.com/PhyberApex/phyberapex.de/issues/71)) ([aa39197](https://github.com/PhyberApex/phyberapex.de/commit/aa3919775e08e4372bdb2862f6460715b9eae9b3))
+
 ## [1.3.1](https://github.com/PhyberApex/phyberapex.de/compare/v1.3.0...v1.3.1) (2024-12-27)
 
 
