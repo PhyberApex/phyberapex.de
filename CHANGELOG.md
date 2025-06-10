@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.4.0](https://github.com/PhyberApex/phyberapex.de/compare/v1.3.2...v1.4.0) (2025-06-10)
+
+
+### Features
+
+* Added new projects and fixed old ones and fixed links ([ede318f](https://github.com/PhyberApex/phyberapex.de/commit/ede318f06a24bbfba37787ab05c85ededfdf727b))
+* Added new projects and fixed old ones and fixed links ([9ba9c24](https://github.com/PhyberApex/phyberapex.de/commit/9ba9c2491ea92006425970be84851646cc527042))
+
+
+### Bug Fixes
+
+* Update dependency @vuepress/theme-default to v2.0.0-rc.105 ([#109](https://github.com/PhyberApex/phyberapex.de/issues/109)) ([4e220d2](https://github.com/PhyberApex/phyberapex.de/commit/4e220d2fb1bf6edd5c9b688510ba5b4da196d807))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.106 ([#110](https://github.com/PhyberApex/phyberapex.de/issues/110)) ([7c22bed](https://github.com/PhyberApex/phyberapex.de/commit/7c22bed974011f2ddfd8a4454670fc7ef9d380df))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.108 ([#114](https://github.com/PhyberApex/phyberapex.de/issues/114)) ([d564387](https://github.com/PhyberApex/phyberapex.de/commit/d56438703c65e6bfc392ddaa4ee80813fea9ab4f))
+* Update dependency sass-embedded to v1.89.0 ([#108](https://github.com/PhyberApex/phyberapex.de/issues/108)) ([dcad7fd](https://github.com/PhyberApex/phyberapex.de/commit/dcad7fdc38521f3eda4832c0de6bc56247e9b75b))
+* Update dependency sass-embedded to v1.89.2 ([#113](https://github.com/PhyberApex/phyberapex.de/issues/113)) ([fff27f5](https://github.com/PhyberApex/phyberapex.de/commit/fff27f5ecbf403b67478a33e04b0a4df7bdd88c5))
+* Update dependency vue to v3.5.14 ([#106](https://github.com/PhyberApex/phyberapex.de/issues/106)) ([b57e70f](https://github.com/PhyberApex/phyberapex.de/commit/b57e70f183873798aa5477401515473bc88cb3cf))
+* Update dependency vue to v3.5.15 ([#111](https://github.com/PhyberApex/phyberapex.de/issues/111)) ([c7c3390](https://github.com/PhyberApex/phyberapex.de/commit/c7c33905411e41ace8c009c00c97c9f4553a769b))
+* Update dependency vue to v3.5.16 ([#112](https://github.com/PhyberApex/phyberapex.de/issues/112)) ([1c21cf4](https://github.com/PhyberApex/phyberapex.de/commit/1c21cf4b2067a0048b43a5a0953592067d593d71))
+
 ## [1.3.2](https://github.com/PhyberApex/phyberapex.de/compare/v1.3.1...v1.3.2) (2025-05-13)
 
 
