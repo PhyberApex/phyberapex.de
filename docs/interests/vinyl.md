@@ -33,6 +33,4 @@ While I've shifted more towards board games these days, my vinyl collection rema
 
 All of my vinyl OSTs are proudly mounted on the wall in my office, creating a stunning display of cover artwork. It's not just a collection, but a visual representation of my love for game and anime music.
 
-Interested in discussing video game or anime soundtracks, or want to share your own vinyl collecting experiences? [Let me know!](/about#lets-connect)
-
-[Back to Interests](#)
+Interested in discussing video game or anime soundtracks, or want to share your own vinyl collecting experiences? [Let me know!](/about#let-s-connect)
