@@ -10,7 +10,7 @@ A collection of super quick talks on various TypeScript topics, designed to prov
 
 ## Project Details
 - **GitHub**: [typescript-lightning-talks](https://github.com/PhyberApex/typescript-lightning-talks)
-- **Tech Used**: Slidev for presentations
+- **Tech Used**: Slidev for presentations, Vue
 - **Status**: Active
 
 ## Features
@@ -19,9 +19,18 @@ A collection of super quick talks on various TypeScript topics, designed to prov
 - Regularly updated with new content
 
 ## Topics Covered
-(List some of the TypeScript topics you've covered in your talks)
+- Branded types
+- The never type
+- Interface vs. type alias
+- Don't use enums
+- Return type by parameters
+- Conditional types
+- Indexed types
+- Don't use shorthand syntax
+- Return type of objects
+- Discriminated unions
 
 ## Future Plans
-(Discuss any upcoming talks or topics you're planning to cover)
+Right now no future plans for more talks
 
-[Back to Projects](./projects)
+[Back to Projects](./)

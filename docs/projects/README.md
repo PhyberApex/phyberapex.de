@@ -15,6 +15,8 @@ Welcome to my project showcase! Here you'll find an overview of my personal proj
 
 ## Personal Projects
 
+- [slds-json-schema-renderer](./slds-schema-renderer.md)
+- [Kuroshiro](./kuroshiro.md)
 - [LobbyBinghoe](./lobbybinghoe)
 - [TypeScript Lightning Talks](./typescript-talks)
 - [KnowledgeNG](./knowledgeng)
@@ -25,6 +27,6 @@ Welcome to my project showcase! Here you'll find an overview of my personal proj
 
 My projects showcase my journey as a developer, from Java applications to web development with Vue.js and TypeScript, and exploring developer education through lightning talks.
 
-[Looking for collaborations or want to discuss technology? Let's connect!](/about#lets-connect)
+[Looking for collaborations or want to discuss technology? Let's connect!](/about#let-s-connect)
 
 [Back to Home](/)

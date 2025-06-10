@@ -31,9 +31,9 @@ These 3D printed solutions have revolutionized my game storage, making setup and
 
 ## TTRPG Journey
 
-I'm just starting my journey into the world of Tabletop Role-Playing Games. While I haven't had my first session yet, I'm excited about the possibilities:
+I'm just starting my journey into the world of Tabletop Role-Playing Games. While I only had a few sessions so far, I'm excited about the possibilities:
 
-- **Systems of Interest**: Bunkers and Badasses, Kids on Bikes
+- **Systems of Interest**: Bunkers and Badasses, Kids on Bikes, Dungeons & Dragons
 - **Character Ideas**: A few concepts brewing, including a quirky gnome artificer and a brooding tiefling warlock
 - **Preparation**: Reading rulebooks, watching actual play videos, and crafting my first character sheet
 
@@ -48,19 +48,10 @@ I'm just starting my journey into the world of Tabletop Role-Playing Games. Whil
 While no longer a primary hobby, I still enjoy the occasional video game session:
 
 - **Current Favorite**: Borderlands Series
-- **Go-to Relaxation Game**: League of Legends
-
-## Community Involvement
-
-- Member of a local board game meetup group
-- Planning to join a TTRPG group for beginners
-- Sharing experiences and tips about 3D printing for board games with fellow enthusiasts
+- **Go-to Relaxation Game**: Rocket League
 
 ## Future Plans
 
 - Hosting a regular board game night with friends
-- Starting my first TTRPG campaign
 
-Interested in gaming together, want to chat about 3D printing for board games, or have recommendations for a new TTRPG player? [Let's connect!](/about#lets-connect)
-
-[Back to Interests](#)
+Interested in gaming together, want to chat about 3D printing for board games, or have recommendations for a new TTRPG player? [Let's connect!](/about#let-s-connect)

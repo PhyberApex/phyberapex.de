@@ -10,7 +10,7 @@ Diary of Legends is a Java fat application designed to help players keep a recor
 
 ## Project Details
 - **GitHub**: [diary-of-legends](https://github.com/PhyberApex/diary-of-legends)
-- **Tech Stack**: Java
+- **Tech Stack**: Java, SVN
 - **Status**: Discontinued (Required third-party library no longer available)
 
 ## Features
@@ -19,9 +19,6 @@ Diary of Legends is a Java fat application designed to help players keep a recor
 - Performance statistics
 
 ## Development Challenges
-(Discuss any significant challenges you faced during development)
+I was trying out different software engineering patterns (like Model-View-Presenter and others for object-oriented programming) back then.
 
-## Lessons Learned
-(Share insights gained from working on this project, especially regarding dependency management)
-
-[Back to Projects](./projects)
+[Back to Projects](./)

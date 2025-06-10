@@ -11,7 +11,7 @@ LobbyBinghoe is a bingo web application designed for fans of the German podcast 
 ## Project Details
 - **GitHub**: [LobbyBinghoe](https://github.com/PhyberApex/LobbyBinghoe)
 - **Tech Stack**: Vue 3, TypeScript, Netlify, Supabase
-- **Status**: Active
+- **Status**: Postponed (No interest gained)
 
 ## Features
 - Interactive bingo board
@@ -19,9 +19,9 @@ LobbyBinghoe is a bingo web application designed for fans of the German podcast 
 - User-friendly interface
 
 ## Development Journey
-(You can add more details about the development process, challenges faced, and solutions implemented)
+I tried out Supabase for the first time and wanted to try some new features from Vue. I also want to use some more advanced features of Supabase like user management etc.
 
 ## Future Plans
-(Discuss any upcoming features or improvements you're planning)
+I want to see where this is going and if this is going to get some traction in the community of the podcast (SPOILER: It did not...)
 
-[Back to Projects](./projects)
+[Back to Projects](./)
