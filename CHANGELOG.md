@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.1](https://github.com/PhyberApex/phyberapex.de/compare/v1.4.0...v1.4.1) (2025-06-19)
+
+
+### Bug Fixes
+
+* Update dependency @vuepress/theme-default to v2.0.0-rc.109 ([#115](https://github.com/PhyberApex/phyberapex.de/issues/115)) ([aaef50c](https://github.com/PhyberApex/phyberapex.de/commit/aaef50cf4318a8d7740eedbc2ab700f2294d297c))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.110 ([#118](https://github.com/PhyberApex/phyberapex.de/issues/118)) ([e45815e](https://github.com/PhyberApex/phyberapex.de/commit/e45815e9190cc473b6ad9fc45e3de85d12ae0518))
+* Update dependency vue to v3.5.17 ([#117](https://github.com/PhyberApex/phyberapex.de/issues/117)) ([7b285f2](https://github.com/PhyberApex/phyberapex.de/commit/7b285f212878d4560ba770638542992f12a9b822))
+
 ## [1.4.0](https://github.com/PhyberApex/phyberapex.de/compare/v1.3.2...v1.4.0) (2025-06-10)
 
 
