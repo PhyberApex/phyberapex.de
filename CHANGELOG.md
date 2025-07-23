@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/PhyberApex/phyberapex.de/compare/v1.4.1...v1.4.2) (2025-07-23)
+
+
+### Bug Fixes
+
+* Update dependency vue to v3.5.18 ([#122](https://github.com/PhyberApex/phyberapex.de/issues/122)) ([be91e9c](https://github.com/PhyberApex/phyberapex.de/commit/be91e9c2c10dd80e70fa6a7a2ee1574af494ed3c))
+
 ## [1.4.1](https://github.com/PhyberApex/phyberapex.de/compare/v1.4.0...v1.4.1) (2025-07-09)
 
 
