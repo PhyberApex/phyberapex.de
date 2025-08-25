@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.4.2](https://github.com/PhyberApex/phyberapex.de/compare/v1.4.1...v1.4.2) (2025-08-25)
+
+
+### Bug Fixes
+
+* Update dependency sass-embedded to v1.90.0 ([#124](https://github.com/PhyberApex/phyberapex.de/issues/124)) ([507625f](https://github.com/PhyberApex/phyberapex.de/commit/507625f93113f0244a13191a66d5d77c4d393974))
+* Update dependency vue to v3.5.18 ([#122](https://github.com/PhyberApex/phyberapex.de/issues/122)) ([be91e9c](https://github.com/PhyberApex/phyberapex.de/commit/be91e9c2c10dd80e70fa6a7a2ee1574af494ed3c))
+* Update dependency vue to v3.5.19 ([#125](https://github.com/PhyberApex/phyberapex.de/issues/125)) ([1031111](https://github.com/PhyberApex/phyberapex.de/commit/1031111ac3618000752ff46715631f1a384c390d))
+* Update dependency vue to v3.5.20 ([#126](https://github.com/PhyberApex/phyberapex.de/issues/126)) ([ceb8945](https://github.com/PhyberApex/phyberapex.de/commit/ceb8945bc05a5ffba9c950c1012f8ce6fa7cd85c))
+
 ## [1.4.1](https://github.com/PhyberApex/phyberapex.de/compare/v1.4.0...v1.4.1) (2025-07-09)
 
 
