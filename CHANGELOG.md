@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.4.2](https://github.com/PhyberApex/phyberapex.de/compare/v1.4.1...v1.4.2) (2025-09-06)
+
+
+### Bug Fixes
+
+* Update dependency @vuepress/bundler-vite to v2.0.0-rc.25 ([#128](https://github.com/PhyberApex/phyberapex.de/issues/128)) ([8173182](https://github.com/PhyberApex/phyberapex.de/commit/817318212413a0fe0b1dbd99a1c1be3d45321d48))
+* Update dependency sass-embedded to v1.90.0 ([#124](https://github.com/PhyberApex/phyberapex.de/issues/124)) ([507625f](https://github.com/PhyberApex/phyberapex.de/commit/507625f93113f0244a13191a66d5d77c4d393974))
+* Update dependency sass-embedded to v1.91.0 ([#127](https://github.com/PhyberApex/phyberapex.de/issues/127)) ([4915c3f](https://github.com/PhyberApex/phyberapex.de/commit/4915c3f02186aaf12bd8031ab5af1a1c6e0f9af1))
+* Update dependency sass-embedded to v1.92.0 ([#131](https://github.com/PhyberApex/phyberapex.de/issues/131)) ([92dfc46](https://github.com/PhyberApex/phyberapex.de/commit/92dfc467d1e8cce5a538d8d885bf5831dc5eeb09))
+* Update dependency sass-embedded to v1.92.1 ([#132](https://github.com/PhyberApex/phyberapex.de/issues/132)) ([c535f2f](https://github.com/PhyberApex/phyberapex.de/commit/c535f2f4db2b1456bda9f7287753489e1061c72e))
+* Update dependency vue to v3.5.18 ([#122](https://github.com/PhyberApex/phyberapex.de/issues/122)) ([be91e9c](https://github.com/PhyberApex/phyberapex.de/commit/be91e9c2c10dd80e70fa6a7a2ee1574af494ed3c))
+* Update dependency vue to v3.5.19 ([#125](https://github.com/PhyberApex/phyberapex.de/issues/125)) ([1031111](https://github.com/PhyberApex/phyberapex.de/commit/1031111ac3618000752ff46715631f1a384c390d))
+* Update dependency vue to v3.5.20 ([#126](https://github.com/PhyberApex/phyberapex.de/issues/126)) ([ceb8945](https://github.com/PhyberApex/phyberapex.de/commit/ceb8945bc05a5ffba9c950c1012f8ce6fa7cd85c))
+* Update dependency vue to v3.5.21 ([#130](https://github.com/PhyberApex/phyberapex.de/issues/130)) ([699807d](https://github.com/PhyberApex/phyberapex.de/commit/699807da22b7c45e42324f65196871cc5b12a775))
+* Update dependency vuepress to v2.0.0-rc.25 ([#129](https://github.com/PhyberApex/phyberapex.de/issues/129)) ([cfc27f3](https://github.com/PhyberApex/phyberapex.de/commit/cfc27f3b397a643cfa9c7a9e38e57137e6b704dc))
+
 ## [1.4.1](https://github.com/PhyberApex/phyberapex.de/compare/v1.4.0...v1.4.1) (2025-07-09)
 
 
