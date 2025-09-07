@@ -39,7 +39,6 @@ I'm just starting my journey into the world of Tabletop Role-Playing Games. Whil
 
 ## Gaming Setup
 
-- **Gaming Table**: Custom-built table with a recessed playing area and cup holders
 - **Organizers**: Various 3D printed organizers and containers to keep game components tidy
 - **Lighting**: Adjustable overhead lighting for the perfect ambiance
 

@@ -33,6 +33,5 @@ description: BYOS for TRMNL
 - Real-time device management and communication
 - Image processing with Imagemagick
 - Custom templating and preview generation for ePaper displays
-- Frontend state and device sync with WebSockets
 
 [Back to Projects](./)
