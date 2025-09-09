@@ -20,6 +20,7 @@ export default defineUserConfig({
                     { text: 'Miniature Painting', link: '/interests/miniatures' },
                 ],
             },
+            { text: 'CV', link: 'https://registry.jsonresume.org/phyberapex?theme=kendall' },
         ],
         sidebar: {
             '/projects/': [
