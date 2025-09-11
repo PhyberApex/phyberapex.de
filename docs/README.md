@@ -16,7 +16,7 @@ features:
     details: Exploring digital worlds and collecting their soundtracks on vinyl
   - title: Miniature Artist
     details: Bringing tiny universes to life with patience and a steady hand
-footer: Made with ❤️ by PhyberApex | © 2024
+footer: Made with ❤️ by PhyberApex | © 2025
 ---
 
 # Welcome to My Digital Realm
