@@ -18,7 +18,7 @@ Welcome to my project showcase! Here you'll find an overview of my personal proj
 - [slds-json-schema-renderer](./slds-schema-renderer.md)
 - [Kuroshiro](./kuroshiro.md)
 - [LobbyBinghoe](./lobbybinghoe)
-- [TypeScript Lightning Talks](./typescript-talks)
+- [Lightning Talks](./lightning-talks)
 - [KnowledgeNG](./knowledgeng)
 - [Diary of Legends](./diary-of-legends)
 - [League of Legends API Wrapper](./lol-api-wrapper)

@@ -1,9 +1,9 @@
 ---
-title: TypeScript Lightning Talks
-description: Quick talks on various TypeScript topics
+title: Lightning Talks
+description: Quick talks on various topics
 ---
 
-# TypeScript Lightning Talks
+# Lightning Talks
 
 ## Overview
 A collection of super quick talks on various topics, designed to provide concise, informative content for developers.
