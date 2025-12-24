@@ -32,7 +32,7 @@ export default defineUserConfig({
                         '/projects/diary-of-legends.md',
                         '/projects/lol-api-wrapper.md',
                         '/projects/lobbybinghoe.md',
-                        '/projects/typescript-talks.md',
+                        '/projects/lightning-talks.md',
                     ],
                 },
             ],
