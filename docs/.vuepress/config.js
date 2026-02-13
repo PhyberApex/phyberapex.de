@@ -28,6 +28,8 @@ export default defineUserConfig({
                     text: 'Projects',
                     children: [
                         '/projects/README.md',
+                        '/projects/infra.md',
+                        '/projects/virtual-camera-overlay.md',
                         '/projects/knowledgeng.md',
                         '/projects/diary-of-legends.md',
                         '/projects/lol-api-wrapper.md',

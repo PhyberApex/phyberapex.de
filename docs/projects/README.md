@@ -15,6 +15,8 @@ Welcome to my project showcase! Here you'll find an overview of my personal proj
 
 ## Personal Projects
 
+- [Homelab Infrastructure](./infra.md)
+- [Virtual Camera Overlay](./virtual-camera-overlay.md)
 - [slds-json-schema-renderer](./slds-schema-renderer.md)
 - [Kuroshiro](./kuroshiro.md)
 - [LobbyBinghoe](./lobbybinghoe)
