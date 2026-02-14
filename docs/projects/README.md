@@ -22,6 +22,7 @@ Welcome to my project showcase! Here you'll find an overview of my personal proj
 - [KnowledgeNG](./knowledgeng)
 - [Diary of Legends](./diary-of-legends)
 - [League of Legends API Wrapper](./lol-api-wrapper)
+- [Hibiki](./hibiki)
 
 ## Project Evolution
 
