@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.6.0](https://github.com/PhyberApex/phyberapex.de/compare/v1.5.0...v1.6.0) (2026-02-15)
+
+
+### Features
+
+* add hibiki project page ([#160](https://github.com/PhyberApex/phyberapex.de/issues/160)) ([086c8c9](https://github.com/PhyberApex/phyberapex.de/commit/086c8c97bec5eaf48e69962cadfe34039acf7c85))
+
+
+### Bug Fixes
+
+* Update dependency @vuepress/theme-default to v2.0.0-rc.122 ([#157](https://github.com/PhyberApex/phyberapex.de/issues/157)) ([37b2ca3](https://github.com/PhyberApex/phyberapex.de/commit/37b2ca33fdcf282547aaa996ac37b6c40f0c8258))
+* Update dependency @vuepress/theme-default to v2.0.0-rc.123 ([#161](https://github.com/PhyberApex/phyberapex.de/issues/161)) ([67ae1ca](https://github.com/PhyberApex/phyberapex.de/commit/67ae1cadbed77386267353ffac27eea15ad646c4))
+* Update dependency sass-embedded to v1.97.2 ([#153](https://github.com/PhyberApex/phyberapex.de/issues/153)) ([324733d](https://github.com/PhyberApex/phyberapex.de/commit/324733d1b2a994a1a28050b10759b09ff7a75ef2))
+* Update dependency sass-embedded to v1.97.3 ([#156](https://github.com/PhyberApex/phyberapex.de/issues/156)) ([d916572](https://github.com/PhyberApex/phyberapex.de/commit/d916572c6682a95e3ccb342d024ac84e36928d9c))
+* Update dependency vue to v3.5.27 ([#155](https://github.com/PhyberApex/phyberapex.de/issues/155)) ([71693bb](https://github.com/PhyberApex/phyberapex.de/commit/71693bbc30927721d0fed7dbef541e0ae6d1d1fc))
+* Update dependency vue to v3.5.28 ([#158](https://github.com/PhyberApex/phyberapex.de/issues/158)) ([a23f191](https://github.com/PhyberApex/phyberapex.de/commit/a23f191f2dd7fc946e5029de7dc66801c28722d1))
+
 ## [1.5.0](https://github.com/PhyberApex/phyberapex.de/compare/v1.4.1...v1.5.0) (2025-12-24)
 
 
