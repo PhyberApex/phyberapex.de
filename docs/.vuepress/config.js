@@ -8,6 +8,9 @@ export default defineUserConfig({
     bundler: viteBundler(),
     theme: defaultTheme({
         logo: '/images/phyberapex-logo.png',
+        logoDark: '/images/phyberapex-logo.png',
+        colorMode: 'auto',
+        colorModeSwitch: true,
         navbar: [
             { text: 'Home', link: '/' },
             { text: 'About', link: '/about' },
