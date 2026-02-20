@@ -11,6 +11,7 @@ export default defineUserConfig({
         navbar: [
             { text: 'Home', link: '/' },
             { text: 'About', link: '/about' },
+            { text: 'Blog', link: '/blog/' },
             { text: 'Projects', link: '/projects/' },
             {
                 text: 'Interests',
@@ -23,6 +24,14 @@ export default defineUserConfig({
             { text: 'CV', link: 'https://registry.jsonresume.org/phyberapex?theme=kendall' },
         ],
         sidebar: {
+            '/blog/': [
+                {
+                    text: 'Blog',
+                    children: [
+                        '/blog/README.md',
+                    ],
+                },
+            ],
             '/projects/': [
                 {
                     text: 'Projects',
