@@ -15,6 +15,11 @@ export default defineUserConfig({
             { text: 'Home', link: '/' },
             { text: 'About', link: '/about' },
             { text: 'Projects', link: '/projects/' },
+            { 
+                text: 'Timeline', 
+                link: '/timeline/',
+                activeMatch: '/timeline/'
+            },
             {
                 text: 'Interests',
                 children: [

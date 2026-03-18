@@ -1,18 +1,23 @@
 {
   "name": "phyberapex.de",
   "version": "1.0.0",
-  "description": "VuePress app for phyberapex.de",
+  "description": "VuePress app for phyberapex.de with interactive timeline",
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
-  "keywords": [],
+  "keywords": [
+    "vuepress",
+    "timeline",
+    "portfolio"
+  ],
   "author": "Janis Walliser",
   "license": "MIT",
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.27",
     "@vuepress/theme-default": "2.0.0-rc.125",
+    "d3": "^7.8.5",
     "sass-embedded": "1.98.0",
     "vue": "3.5.30",
     "vuepress": "2.0.0-rc.27"
