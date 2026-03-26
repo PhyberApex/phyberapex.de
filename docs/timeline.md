@@ -260,6 +260,7 @@ const isLoading = ref(true)
 const modalOpen = ref(false)
 const selectedProject = ref(null)
 let resizeObserver = null
+let keyHandler = null
 
 // Helper functions
 function getRepoIcon(repoName) {
@@ -276,57 +277,87 @@ function shortenName(name) {
     return name.substring(0, 10) + '...'
 }
 
+function mapRepos(repos) {
+    return repos
+        .filter(repo => repo.description && !repo.fork)
+        .map(repo => ({
+            type: 'github',
+            title: repo.name,
+            name: repo.full_name || repo.name,
+            description: repo.description,
+            date: new Date(repo.created_at),
+            updated: new Date(repo.updated_at),
+            url: repo.url || repo.html_url,
+            language: repo.language || 'Other',
+            stars: repo.stars ?? repo.stargazers_count ?? 0,
+            forks: repo.forks ?? repo.forks_count ?? 0,
+            icon: getRepoIcon(repo.name)
+        }))
+        .sort((a, b) => a.date - b.date)
+}
+
 async function fetchTimelineData() {
     try {
+        // Try static pre-generated JSON first (avoids API rate limits)
+        try {
+            const localRes = await fetch('/timeline-data.json')
+            if (localRes.ok) {
+                const localData = await localRes.json()
+                timelineData.value = mapRepos(localData)
+                isLoading.value = false
+                setTimeout(() => renderTimeline(), 100)
+                return
+            }
+        } catch {}
+
+        // Fallback: fetch live from GitHub API
         const response = await fetch('https://api.github.com/users/PhyberApex/repos?per_page=100&sort=updated&direction=desc')
         if (!response.ok) throw new Error('Failed to fetch GitHub repos')
-        
+
         const repos = await response.json()
-        
-        timelineData.value = repos
-            .filter(repo => repo.description && !repo.fork)
-            .map(repo => ({
-                type: 'github',
-                title: repo.name,
-                name: repo.full_name,
-                description: repo.description,
-                date: new Date(repo.created_at),
-                updated: new Date(repo.updated_at),
-                url: repo.html_url,
-                language: repo.language || 'Other',
-                stars: repo.stargazers_count,
-                forks: repo.forks_count,
-                license: repo.license?.name || 'Open Source',
-                icon: getRepoIcon(repo.name)
-            }))
-            .sort((a, b) => a.date - b.date)
-        
+        timelineData.value = mapRepos(repos)
         isLoading.value = false
-        
+
         // Render after data is loaded
         setTimeout(() => renderTimeline(), 100)
     } catch (error) {
         console.error('Error:', error)
         isLoading.value = false
-        document.querySelector('.loading').textContent = 
-            'Failed to load timeline data. Please try again later.'
+        const loadingEl = document.querySelector('.loading')
+        if (loadingEl) loadingEl.textContent = 'Failed to load timeline data. Please try again later.'
     }
 }
 
 function openModal(project) {
     selectedProject.value = project
     modalOpen.value = true
-    
-    // Prevent background scrolling
     document.body.style.overflow = 'hidden'
+
+    const modal = document.getElementById('modal')
+    const titleEl = document.getElementById('modal-title')
+    const bodyEl = document.getElementById('modal-body')
+
+    titleEl.textContent = project.title
+    bodyEl.innerHTML = `
+        <p style="color: #ccc; margin-bottom: 1rem;">${project.description}</p>
+        <h3>Details</h3>
+        <ul>
+            <li>Language: ${project.language}</li>
+            <li>Stars: ${project.stars}</li>
+            <li>Forks: ${project.forks}</li>
+            <li>Created: ${project.date.getFullYear()}</li>
+            <li>Last updated: ${project.updated.toLocaleDateString()}</li>
+        </ul>
+        <a class="project-link" href="${project.url}" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    `
+    modal.classList.remove('hidden')
 }
 
 function closeModal() {
     modalOpen.value = false
     selectedProject.value = null
-    
-    // Restore background scrolling
     document.body.style.overflow = ''
+    document.getElementById('modal').classList.add('hidden')
 }
 
 function renderTimeline() {
@@ -464,25 +495,31 @@ function handleResize() {
 
 onMounted(() => {
     fetchTimelineData()
-    
+
     // Set up resize observer
     resizeObserver = new ResizeObserver(handleResize)
     const container = document.getElementById('timeline-container')
     if (container) {
         resizeObserver.observe(container)
     }
-    
-    // Handle modal close events
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modalOpen.value) {
-            closeModal()
-        }
+
+    // Close button and backdrop click
+    document.querySelector('.close').addEventListener('click', closeModal)
+    document.getElementById('modal').addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) closeModal()
     })
+
+    // Keyboard close
+    keyHandler = (e) => { if (e.key === 'Escape' && modalOpen.value) closeModal() }
+    document.addEventListener('keydown', keyHandler)
 })
 
 onBeforeUnmount(() => {
     if (resizeObserver) {
         resizeObserver.disconnect()
+    }
+    if (keyHandler) {
+        document.removeEventListener('keydown', keyHandler)
     }
 })
 </script>
