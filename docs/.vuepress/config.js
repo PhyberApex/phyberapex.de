@@ -23,7 +23,6 @@ export default defineUserConfig({
                     { text: 'Miniature Painting', link: '/interests/miniatures' },
                 ],
             },
-            { text: 'Kongroo', link: '/kongroo' },
             {
                 text: 'CV',
                 children: [
