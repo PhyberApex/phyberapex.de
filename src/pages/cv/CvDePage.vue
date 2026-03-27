@@ -198,7 +198,7 @@
 </template>
 
 <script setup>
-import resumeData from '../../../resume.de.json'
+import resumeData from '@data/resume.de.json'
 
 const data = resumeData
 
@@ -248,9 +248,7 @@ function formatYearDe(dateStr) {
   border-bottom: 2px solid #111;
 }
 
-.lv-header-left {
-  flex: 1;
-}
+.lv-header-left { flex: 1; }
 
 .lv-name {
   font-size: 1.8rem;
@@ -264,32 +262,13 @@ function formatYearDe(dateStr) {
   line-height: 1.2;
 }
 
-.lv-label {
-  font-size: 0.95rem;
-  font-style: italic;
-  color: #444;
-  margin: 0 0 1rem;
-}
+.lv-label { font-size: 0.95rem; font-style: italic; color: #444; margin: 0 0 1rem; }
 
-.lv-contact-rows {
-  font-size: 0.875rem;
-  line-height: 1.75;
-}
+.lv-contact-rows { font-size: 0.875rem; line-height: 1.75; }
 
-.lv-contact-row {
-  display: flex;
-  gap: 0.75rem;
-  color: #111;
-}
-
-.lv-contact-row a {
-  color: #111;
-  text-decoration: none;
-}
-
-.lv-contact-row a:hover {
-  text-decoration: underline;
-}
+.lv-contact-row { display: flex; gap: 0.75rem; color: #111; }
+.lv-contact-row a { color: #111; text-decoration: none; }
+.lv-contact-row a:hover { text-decoration: underline; }
 
 .lv-ct-label {
   font-weight: 600;
@@ -310,9 +289,7 @@ function formatYearDe(dateStr) {
 }
 
 /* ── Sections ── */
-.lv-section {
-  margin-bottom: 1.5rem;
-}
+.lv-section { margin-bottom: 1.5rem; }
 
 .lv-section-header {
   font-size: 0.75rem;
@@ -326,13 +303,9 @@ function formatYearDe(dateStr) {
   margin-bottom: 0.75rem;
 }
 
-.lv-summary {
-  margin: 0;
-  color: #222;
-  line-height: 1.7;
-}
+.lv-summary { margin: 0; color: #222; line-height: 1.7; }
 
-/* ── Entries (two-column: date | content) ── */
+/* ── Entries ── */
 .lv-entry {
   display: grid;
   grid-template-columns: 140px 1fr;
@@ -341,9 +314,7 @@ function formatYearDe(dateStr) {
   align-items: start;
 }
 
-.lv-entry--inline {
-  margin-bottom: 0.35rem;
-}
+.lv-entry--inline { margin-bottom: 0.35rem; }
 
 .lv-date-col {
   font-size: 0.8rem;
@@ -353,73 +324,20 @@ function formatYearDe(dateStr) {
   white-space: nowrap;
 }
 
-.lv-cat-label {
-  font-weight: 600;
-  color: #222;
-  font-size: 0.875rem;
-  white-space: normal;
-}
+.lv-cat-label { font-weight: 600; color: #222; font-size: 0.875rem; white-space: normal; }
+.lv-content-col { min-width: 0; font-size: 0.9rem; color: #222; }
+.lv-entry-title { font-weight: 700; margin: 0 0 0.1rem; color: #111; font-size: 0.9rem; }
 
-.lv-content-col {
-  min-width: 0;
-  font-size: 0.9rem;
-  color: #222;
-}
+.lv-entry-title-link { font-weight: 700; color: #111; text-decoration: none; font-size: 0.9rem; }
+.lv-entry-title-link:hover { text-decoration: underline; }
 
-.lv-entry-title {
-  font-weight: 700;
-  margin: 0 0 0.1rem;
-  color: #111;
-  font-size: 0.9rem;
-}
-
-.lv-entry-title-link {
-  font-weight: 700;
-  color: #111;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.lv-entry-title-link:hover {
-  text-decoration: underline;
-}
-
-.lv-entry-sub {
-  margin: 0 0 0.1rem;
-  font-size: 0.875rem;
-  color: #333;
-}
-
-.lv-entry-sub a {
-  color: #111;
-  text-decoration: none;
-}
-
-.lv-entry-sub a:hover {
-  text-decoration: underline;
-}
-
-.lv-muted {
-  color: #666;
-}
-
-.lv-entry-desc {
-  margin: 0.2rem 0 0;
-  font-size: 0.855rem;
-  color: #444;
-  line-height: 1.65;
-}
-
-.lv-entry-detail {
-  margin: 0.15rem 0 0;
-  font-size: 0.8rem;
-  color: #666;
-}
-
-.lv-kw-list {
-  font-size: 0.875rem;
-  color: #333;
-}
+.lv-entry-sub { margin: 0 0 0.1rem; font-size: 0.875rem; color: #333; }
+.lv-entry-sub a { color: #111; text-decoration: none; }
+.lv-entry-sub a:hover { text-decoration: underline; }
+.lv-muted { color: #666; }
+.lv-entry-desc { margin: 0.2rem 0 0; font-size: 0.855rem; color: #444; line-height: 1.65; }
+.lv-entry-detail { margin: 0.15rem 0 0; font-size: 0.8rem; color: #666; }
+.lv-kw-list { font-size: 0.875rem; color: #333; }
 
 /* ── Signature ── */
 .lv-signature {
@@ -430,76 +348,24 @@ function formatYearDe(dateStr) {
   color: #333;
 }
 
-.lv-signature p {
-  margin: 0 0 0.5rem;
-}
-
-.lv-sig-line {
-  width: 220px;
-  border-bottom: 1px solid #999;
-  margin: 2rem 0 0.35rem;
-}
-
-.lv-sig-name {
-  font-weight: 600;
-  color: #111;
-  font-size: 0.875rem;
-  margin: 0 !important;
-}
+.lv-signature p { margin: 0 0 0.5rem; }
+.lv-sig-line { width: 220px; border-bottom: 1px solid #999; margin: 2rem 0 0.35rem; }
+.lv-sig-name { font-weight: 600; color: #111; font-size: 0.875rem; margin: 0 !important; }
 
 /* ── Responsive ── */
 @media (max-width: 540px) {
-  .lv-header {
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
-  }
-
-  .lv-entry {
-    grid-template-columns: 1fr;
-    gap: 0.1rem;
-  }
-
-  .lv-date-col {
-    font-size: 0.75rem;
-    color: #888;
-  }
+  .lv-header { flex-direction: column-reverse; align-items: center; text-align: center; }
+  .lv-entry { grid-template-columns: 1fr; gap: 0.1rem; }
+  .lv-date-col { font-size: 0.75rem; color: #888; }
 }
 
 /* ── Print ── */
 @media print {
-  .resume-de {
-    max-width: none;
-    padding: 0 1cm;
-    font-size: 10pt;
-    color: #000;
-  }
-
-  .lv-name,
-  .lv-section-header,
-  .lv-entry-title,
-  .lv-entry-title-link,
-  .lv-content-col,
-  .lv-header {
-    color: #000;
-    border-color: #000;
-  }
-
-  .lv-photo {
-    border-color: #999;
-  }
-
-  a {
-    color: #000;
-    text-decoration: none;
-  }
-
-  .lv-section {
-    page-break-inside: avoid;
-  }
-
-  .lv-signature {
-    border-color: #ccc;
-  }
+  .resume-de { max-width: none; padding: 0 1cm; font-size: 10pt; color: #000; }
+  .lv-name, .lv-section-header, .lv-entry-title, .lv-entry-title-link, .lv-content-col, .lv-header { color: #000; border-color: #000; }
+  .lv-photo { border-color: #999; }
+  a { color: #000; text-decoration: none; }
+  .lv-section { page-break-inside: avoid; }
+  .lv-signature { border-color: #ccc; }
 }
 </style>

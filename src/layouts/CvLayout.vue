@@ -1,11 +1,11 @@
 <template>
   <div class="cv-shell">
     <div class="cv-toolbar no-print">
-      <a href="/" class="cv-back">← Back to site</a>
-      <button class="cv-print-btn" @click="() => window.print()">Print / Save PDF</button>
+      <router-link to="/" class="cv-back">← Back to site</router-link>
+      <button class="cv-print-btn" @click="window.print()">Print / Save PDF</button>
     </div>
     <div class="cv-body">
-      <Content />
+      <router-view />
     </div>
   </div>
 </template>
@@ -41,7 +41,7 @@ onUnmounted(() => {
   align-items: center;
   padding: 0.5rem 1.5rem;
   background: rgba(255, 255, 255, 0.96);
-  border-bottom: 1px solid #d1d5db;
+  border-bottom: 2px solid #1bb2e5;
   backdrop-filter: blur(6px);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 0.875rem;
