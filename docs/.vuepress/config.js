@@ -24,7 +24,13 @@ export default defineUserConfig({
                 ],
             },
             { text: 'Kongroo', link: '/kongroo' },
-            { text: 'CV', link: 'https://registry.jsonresume.org/phyberapex?theme=kendall' },
+            {
+                text: 'CV',
+                children: [
+                    { text: 'English', link: '/cv' },
+                    { text: 'Deutsch', link: '/lebenslauf' },
+                ],
+            },
         ],
         sidebar: {
             '/projects/': [

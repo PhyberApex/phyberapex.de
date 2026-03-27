@@ -1,0 +1,259 @@
+{
+  "basics": {
+    "name": "Janis Walliser",
+    "label": "PMTS Software Engineer bei Salesforce",
+    "picture": "https://phyberapex.de/images/me2.jpeg",
+    "email": "janis@phyberapex.de",
+    "phone": "(+49) 157-30404362",
+    "website": "https://phyberapex.de",
+    "summary": "Leidenschaftlicher Software-Ingenieur mit ausgeprägtem Interesse an IT-Sicherheit und Softwareentwicklung. Begeistert vom Erlernen neuer Technologien und der Weitergabe von Wissen. Natürlicher Mentor und Teammotivator, der mit kreativem Denken technische Herausforderungen überbrückt – ob beim Programmierunterricht für Kinder oder bei der Leitung von Sicherheitsinitiativen in Enterprise-Teams.",
+    "location": {
+      "city": "Kaiserslautern",
+      "countryCode": "DE",
+      "region": "Rheinland-Pfalz"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "janis-walliser-41687278",
+        "url": "https://www.linkedin.com/in/janis-walliser-41687278/"
+      },
+      {
+        "network": "Github",
+        "username": "PhyberApex",
+        "url": "https://github.com/PhyberApex/"
+      }
+    ],
+    "url": "https://phyberapex.de",
+    "image": "https://avatars.githubusercontent.com/u/1316500?s=400&u=e27cdf54642a3eae089c8e417adf08e7b1efd037&v=4"
+  },
+  "work": [
+    {
+      "name": "Salesforce",
+      "position": "Software Engineering PMTS",
+      "startDate": "2021-11-01",
+      "location": "Mannheim",
+      "url": "https://www.salesforce.com/",
+      "summary": "Primärer Sicherheitsbeauftragter für alle MuleSoft RPA-Projektteams. Organisation und Durchführung von Security Lunch & Learn-Sessions sowie TypeScript-Wissenstransfer-Veranstaltungen. Mitwirkung an der strategischen Roadmap zur Migration von On-Premises-Lösungen in die Cloud und zur Integration in die Salesforce-Kernplattform inklusive umfassender Dokumentation und Architekturdiagramme. Entwicklung von Full-Stack-Webanwendungen (JavaScript/TypeScript, C#) sowie Erweiterung der Salesforce-Kernfunktionalität mit Java und TypeScript. Eigenständige Konzeption und Implementierung einer teamübergreifenden Test-Applikation mit Vue.js, Electron und TypeScript.",
+      "description": "",
+      "highlights": []
+    },
+    {
+      "name": "Servicetrace GmbH",
+      "position": "Competence Lead Software Security",
+      "startDate": "2020-01-01",
+      "endDate": "2021-10-30",
+      "location": "Mannheim",
+      "summary": "Primärer Ansprechpartner für alle sicherheitsrelevanten Themen in den Entwicklungsteams. Eigenständige Erstellung umfassender Richtlinien für sicheres Programmieren. Planung und Durchführung regelmäßiger Security Lunch & Learn-Sessions sowie gezielter Sicherheits-Workshops zur nachhaltigen Implementierung sicherer Entwicklungspraktiken.",
+      "description": "",
+      "highlights": []
+    },
+    {
+      "name": "Servicetrace GmbH",
+      "position": "Entwickler / Senior-Entwickler",
+      "startDate": "2015-04-01",
+      "endDate": "2021-10-30",
+      "location": "Mannheim",
+      "summary": "Entwicklung und Pflege von X1, einer unternehmensweiten On-Premises-Lösung zur Robotergestützten Prozessautomatisierung (RPA). Konzeption und Implementierung robuster RESTful APIs mit C# und .NET. Entwicklung responsiver Frontend-Oberflächen mit Vue.js und JavaScript. Maßgebliche Beteiligung am API-Design sowie End-to-End-Feature-Entwicklung von der Datenbankschicht bis zur Benutzeroberfläche.",
+      "description": "",
+      "highlights": []
+    },
+    {
+      "name": "trans-o-flex IT-Service GmbH",
+      "position": "Software-Entwickler",
+      "startDate": "2013-10-01",
+      "endDate": "2015-03-31",
+      "location": "Weinheim",
+      "url": "https://www.trans-o-flex.com/",
+      "summary": "Entwicklung von Java Fat-Client- und Webanwendungen mit GWT. Anpassung und Erweiterung von SharePoint 365 mit Nintex Forms und Workflows.",
+      "description": "",
+      "highlights": []
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Coder Dojo Heidelberg",
+      "position": "Mentor",
+      "website": "https://menloparklab.com",
+      "startDate": "2019-12-01",
+      "endDate": "2020-06-30",
+      "summary": "Scratch-Mentor beim CoderDojo Heidelberg. Vermittlung von Programmierkenntnissen und Projektmanagement-Grundlagen für Kinder mithilfe von Scratch.",
+      "highlights": [],
+      "url": "https://coderdojohd.github.io/"
+    }
+  ],
+  "education": [
+    {
+      "institution": "DHBW",
+      "area": "Informationstechnologie",
+      "studyType": "Bachelor of Engineering",
+      "startDate": "2010-08-01",
+      "endDate": "2013-08-30",
+      "score": "2,1",
+      "courses": []
+    },
+    {
+      "institution": "Julius-Springer Schule Heidelberg",
+      "area": "Informationstechnologie",
+      "studyType": "Fachhochschulreife",
+      "startDate": "2008-09-01",
+      "endDate": "2010-07-31",
+      "score": "1,6",
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "TMP All-Star Award",
+      "date": "2022-01-01",
+      "awarder": "Salesforce",
+      "summary": "Verliehen an Mitarbeiter, die die Grundwerte von Salesforce verkörpern: Vertrauen, Kundenerfolg, Innovation, Gleichberechtigung und Nachhaltigkeit."
+    }
+  ],
+  "publications": [
+    {
+      "name": "Deep Dive 106 - Software-Security mit Janis Walliser",
+      "publisher": "programmier.bar",
+      "releaseDate": "2022-05-27",
+      "summary": "Experteninterview zu Software-Sicherheitspraktiken für den deutschen Technologie-Podcast programmier.bar.",
+      "url": "https://www.programmier.bar/podcast/deep-dive-106-software-security-mit-janis-walliser"
+    },
+    {
+      "name": "TypeScript Lightning Talks",
+      "summary": "Lightning-Talk-Präsentationen für diverse Fachpublikumsgruppen und bereichsübergreifende Teams.",
+      "url": "https://phyberapex.github.io/typescript-lightning-talks/"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Entwicklung",
+      "keywords": [
+        "SDLC",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "NestJS",
+        "Vue.js",
+        "Node.js",
+        "Vite",
+        "RESTful APIs",
+        "C#",
+        "Java"
+      ]
+    },
+    {
+      "name": "Anwendungssicherheit",
+      "keywords": [
+        "SSDLC",
+        "Threat Modeling",
+        "ASVS",
+        "OWASP Top 10",
+        "Social Engineering",
+        "SAST",
+        "DAST",
+        "SBOM"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "keywords": [
+        "K8s",
+        "AWS (S3 / EC2 / RDS / KMS)",
+        "Docker",
+        "CI / CD (TeamCity / Jenkins)"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Deutsch",
+      "fluency": "Muttersprache"
+    },
+    {
+      "language": "Englisch",
+      "fluency": "Fließend"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Brettspiele",
+      "keywords": [
+        "3D-gedruckte Einlagen",
+        "Miniaturenbemalung"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jochen Hammann",
+      "reference": "I've had the privilege of working with Janis for more than ten years, and for the last four—after I became a manager—he has been part of my team. As a member of our agile Scrum team, Janis quickly established himself as a highly respected colleague and a valued point of contact both within and beyond the team. His profound knowledge has supported us in many situations, and his commitment to sharing expertise through regular knowledge transfers has been a great benefit to the entire group. Janis is well known as our security champion, where his expertise and dedication have significantly strengthened the team's capabilities. He consistently delivered high-quality results, stayed reliable even under changing conditions, and adapted smoothly when focus or direction shifted. What impresses me most is Janis's drive for continuous development. He demonstrates the functional skills needed for his role at a very high level, while also showing initiative and willingness to keep growing professionally. This combination of knowledge, reliability, and dedication has made him an invaluable contributor and a trusted colleague. I can fully recommend Janis as a skilled, dependable, and forward-looking professional who brings great value to every team he is part of."
+    },
+    {
+      "name": "Roelof Meyer",
+      "reference": "It is rare to have such a dedicated and professional software developer in your team. Janis is able to learn new topics and technologies very quickly, analyse them and implement them very accurately. A high level of passion, energy, drive and out-of-the-box thinking describes Janis quite well. It is more then fun to work with Janis - it is a honor - not only because of his positive attitude and motivation. For sure he would be an asset for each company looking for a competent Software Engineer and teamplayer."
+    },
+    {
+      "name": "Moritz Seitz",
+      "reference": "Janis is an outstanding professional with deep expertise in security. He was like a mentor to me, always willing to share his knowledge and guidance. What truly sets him apart is the way he looks after his team and everyone around it, ensuring that people can work at their best. Janis is highly attentive to his environment and an absolute role model in both professionalism and leadership."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Total TypeScript - TypeScript Pro Essentials",
+      "date": "2025-09-09",
+      "issuer": "Total TypeScript",
+      "url": "https://res.cloudinary.com/total-typescript/image/upload/v1757428069/certificate/7c1df4a5-6b63-49e2-be66-729a6f8cd425/typescript-pro-essentials.png"
+    },
+    {
+      "name": "Certified Senior Vue.js Developer",
+      "date": "2024-07-28",
+      "issuer": "Vue School",
+      "url": "https://api.certificates.dev/certificates/9ca17bca-7329-42a8-bd69-4bd7086c51ba/download?signature=e089727a3b245de2cd2f981a98858704e1f8b383d5b5223a0813b416e1374d6a"
+    },
+    {
+      "name": "Application Security Foundations Program",
+      "date": "2021-01-21",
+      "issuer": "We Hack Purple Acadamy",
+      "url": "https://www.credential.net/e5b013fb-1853-4eed-88ce-250bb990c2ba"
+    },
+    {
+      "name": "Cryptography",
+      "date": "2015-06-12",
+      "issuer": "Coursera (University of Maryland)",
+      "url": "https://www.coursera.org/account/accomplishments/verify/XBF92SMRJS"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Kuroshiro",
+      "description": "Konzeption und Entwicklung einer Open-Source-Self-Hosting-Lösung zur Erweiterung der TRMNL-Ökosystem-Flexibilität. Full-Stack-Implementierung mit NestJS, Vue.js, Docker-Containerisierung und PostgreSQL-Datenbank.",
+      "highlights": [],
+      "keywords": [
+        "NestJS",
+        "TypeScript",
+        "Vue.js",
+        "Vite"
+      ],
+      "startDate": "2025-05-31",
+      "url": "https://github.com/PhyberApex/kuroshiro",
+      "roles": [
+        "Maintainer"
+      ]
+    },
+    {
+      "name": "SLDS JSON Schema Renderer",
+      "description": "Entwicklung eines Kommandozeilen-Dokumentationsgenerators, der JSON-Schema-Dateien in interaktive, ansprechend gestaltete statische Webseiten mit Vue.js und Salesforce Lightning Design System-Komponenten umwandelt.",
+      "highlights": [],
+      "keywords": [
+        "Vue.js",
+        "Vite"
+      ],
+      "startDate": "2025-04-13",
+      "url": "https://github.com/PhyberApex/slds-json-schema-renderer",
+      "roles": [
+        "Maintainer"
+      ]
+    }
+  ]
+}
