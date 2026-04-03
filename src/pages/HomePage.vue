@@ -78,7 +78,7 @@ const SCRIPT = [
   { type: 'gap' },
   { type: 'cmd',  text: 'cat currently.txt' },
   { type: 'out',  text: 'Spinning: VA-11 HALL-A Original Soundtrack.' },
-  { type: 'out',  text: 'Painting: batch of 12 Gloomhaven minis, base coat done.' },
+  { type: 'out',  text: 'Painting: Zombicide survivors.' },
   { type: 'out',  text: 'Collecting: 16 Salesforce plushies. Still growing.' },
 ]
 

@@ -2,31 +2,32 @@ export const PROJECT_CONTENT = {
   hibiki: {
     title: 'Hibiki',
     github: 'https://github.com/PhyberApex/hibiki',
-    tech: 'NestJS, Vue 3, Discord.js, SQLite, Docker',
+    tech: 'Electron, Vue 3, TypeScript, Discord.js',
     status: 'active',
-    intro: 'Grouvee, Spotify, and YouTube Music all had what I needed — except they cost money after the free tier. So I spent evenings building a Discord bot that runs self-hosted, costs nothing to operate, and has a REST API so I could build a web dashboard for it. The web dashboard was the over-engineering part. Worth it.',
+    intro: 'Grouvee, Spotify, and YouTube Music all had what I needed — except they cost money after the free tier. So I spent evenings building a Discord bot that runs as a desktop app, costs nothing to operate, and has a Vue 3 interface for managing it. The Electron wrapper was the over-engineering part. Worth it.',
     sections: [
       {
         type: 'features',
         heading: 'What it does',
         items: [
           'Music playback in Discord voice channels via slash commands',
-          'Web dashboard for remote player control from the browser',
-          'Permission system shared between Discord and the REST API',
-          'SQLite-based state persistence with live/snapshot indicators',
-          'REST API for guild/channel directory and player management',
-          'Docker-ready with volume-based storage',
+          'Electron desktop app with Vue 3 interface for player control',
+          'Cross-platform (Windows, macOS, Linux) with native installers',
+          'JSON file-based state persistence for configuration and playlists',
+          'Web Audio API integration for browser-based audio capture',
+          'Guild and channel management from the desktop UI',
         ],
       },
       {
         type: 'stack',
         heading: "How it's built",
         items: [
-          'Full-stack monorepo with pnpm workspaces',
-          'NestJS handles the REST API, Discord gateway, and audio streaming',
-          'Vue 3 dashboard consumes the REST API',
-          'Player state reconciled between live memory and SQLite snapshots',
-          'discord.js for bot commands and voice channel management',
+          'Electron desktop application with Vue 3 frontend',
+          'Discord.js for bot commands and voice channel management',
+          'TypeScript across the entire codebase for type safety',
+          'Vite for fast development builds and HMR',
+          'Electron Forge for packaging and distribution',
+          'JSON file storage for persistent state',
         ],
       },
     ],
@@ -129,9 +130,9 @@ export const PROJECT_CONTENT = {
   'diary-of-legends': {
     title: 'Diary of Legends',
     github: 'https://github.com/PhyberApex/diary-of-legends',
-    tech: 'Java, SVN',
+    tech: 'Java, Elophant API',
     status: 'archived',
-    intro: 'A Java desktop app for tracking League of Legends match history and matchup notes. Archived when a required third-party library stopped being maintained — a lesson in third-party dependency risk learned before I knew what that phrase meant. Less about the game, more about learning Model-View-Presenter and OOP patterns under real conditions.',
+    intro: 'A Java desktop app for tracking League of Legends match history and matchup notes. Archived when the Elophant API shut down — a lesson in third-party dependency risk learned before I knew what that phrase meant. Less about the game, more about learning Model-View-Presenter and OOP patterns under real conditions.',
     sections: [
       {
         type: 'features',

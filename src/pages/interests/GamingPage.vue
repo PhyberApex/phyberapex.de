@@ -52,7 +52,7 @@
       </ul>
     </section>
 
-    <p class="gp-closing">If you're somewhere in the Rhine Valley with a Gloomhaven box and a free Saturday, I'm already interested — <a href="https://www.linkedin.com/in/janis-walliser-41687278/" target="_blank" rel="noopener noreferrer">find me here.</a></p>
+    <p class="gp-closing">If you're somewhere in the Rhine Valley want to slay some Zombies and have a free Saturday, I'm already interested — <a href="https://www.linkedin.com/in/janis-walliser-41687278/" target="_blank" rel="noopener noreferrer">find me here.</a></p>
   </div>
 </template>
 
@@ -65,10 +65,10 @@ const STATUS_LABELS = {
 
 const games = [
   {
-    title: 'Gloomhaven',
+    title: 'Dragons of Stormwreck Isle',
     status: 'active',
-    desc: 'Epic campaign with deep strategy and a story that evolves permanently.',
-    tags: ['legacy', 'cooperative', 'miniatures'],
+    desc: 'D&D campaign led by my wife.',
+    tags: ['d&d', 'fantasy', 'beginner'],
   },
   {
     title: 'Zombicide',
@@ -78,7 +78,7 @@ const games = [
   },
   {
     title: 'Final Girl',
-    status: 'shelved',
+    status: 'active',
     desc: 'Solo horror movie-inspired game. Surprisingly tense every run.',
     tags: ['solo', 'horror', 'variable setup'],
   },

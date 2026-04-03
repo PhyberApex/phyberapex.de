@@ -133,9 +133,9 @@
 
       <div class="cs-sep" aria-hidden="true"><span>✦</span></div>
 
-      <!-- Party Members -->
+      <!-- Companion Multiclassing -->
       <section class="cs-section cs-party-section">
-        <h2 class="cs-section-title cs-section-title--center">Party Members</h2>
+        <h2 class="cs-section-title cs-section-title--center">Companion Multiclassing Attempts</h2>
         <div class="cs-party-grid">
           <div v-for="member in PARTY" :key="member.name" class="cs-party-member">
 
@@ -184,9 +184,9 @@ const STATS = [
   { abbr: 'STR', name: 'Strength',     value: 8,  mod: '−1', flavor: 'Prefers keyboard to kettlebells.', neg: true },
   { abbr: 'DEX', name: 'Dexterity',    value: 12, mod: '+1', flavor: 'Steady enough to paint 28mm eyes.' },
   { abbr: 'CON', name: 'Constitution', value: 14, mod: '+2', flavor: 'Survives multi-year Gloomhaven campaigns.' },
-  { abbr: 'INT', name: 'Intelligence', value: 18, mod: '+4', flavor: 'Primary stat. Does not apologize.' },
+  { abbr: 'INT', name: 'Intelligence', value: 18, mod: '+4', flavor: 'Primary stat. Still understands claude code generated source code.' },
   { abbr: 'WIS', name: 'Wisdom',       value: 15, mod: '+2', flavor: 'Knows which PR needs the security review.' },
-  { abbr: 'CHA', name: 'Charisma',     value: 16, mod: '+3', flavor: 'Senior engineers still answer his Slack.' },
+  { abbr: 'CHA', name: 'Charisma',     value: 16, mod: '+3', flavor: 'Person with the most personalized slack emojis.' },
 ]
 
 const SKILLS = [
@@ -216,10 +216,10 @@ const QUESTS = [
 ]
 
 const PARTY = [
-  { name: 'Morty',           caption: 'Morty · Good Boy · Age 7',  photo: '/images/morty1.jpg',  rot: -2,   role: null, note: null },
-  { name: 'Morty (Cosplay)', caption: 'Halloween specialist',        photo: '/images/morty2.jpeg', rot:  1.5, role: null, note: null },
-  { name: 'Morty (Reveal)',  caption: 'The big reveal',              photo: '/images/morty3.jpg',  rot: -1,   role: null, note: null },
-  { name: 'The Family',      caption: null, photo: null, rot: 0,
+  { name: 'Scientist/Sidekick (Multiclass)', caption: 'Morty (dog) cosplaying Rick while I cosplay Morty (human). Ontological crisis optional.', photo: '/images/morty1.jpg', rot: -2, role: null, note: null },
+  { name: 'Ranger/Beast (Wildshape)', caption: 'Little Red Riding Hood meets her "grandmother." No wolves were harmed in this photoshoot.', photo: '/images/morty2.jpeg', rot: 1.5, role: null, note: null },
+  { name: 'Trainer/Companion (Pokémon AU)', caption: 'Ash Ketchum energy, Pikachu compliance issues. 10/10 would choose again.', photo: '/images/morty3.jpg', rot: -1, role: null, note: null },
+  { name: 'The Family', caption: null, photo: null, rot: 0,
     role: 'Wife · Son · Young Child',
     note: 'Support party. Healers. The reason to ship clean code.' },
 ]
