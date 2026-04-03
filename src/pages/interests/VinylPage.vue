@@ -1,33 +1,71 @@
 <template>
-  <div class="vinyl-page">
-    <header class="vp-header">
-      <p class="vp-kicker">CRATE · {{ records.length }} records</p>
-      <h1 class="vp-title">Vinyl</h1>
-      <p class="vp-subtitle">Game &amp; anime OSTs. All wall-mounted. A listening collection and a display.</p>
-    </header>
-
-    <ul class="vp-crate" role="list" aria-label="Record collection">
-      <li
-        v-for="(record, i) in records"
-        :key="record.title"
-        class="vp-record"
-        :class="{ 'vp-record--featured': record.featured }"
-      >
-        <div class="vp-sleeve" :style="{ '--sleeve-color': record.color }" aria-hidden="true">
-          <span class="vp-slot-num">{{ String(i + 1).padStart(2, '0') }}</span>
+  <div class="vinyl-root">
+    <!-- Terminal window -->
+    <div class="vinyl-window">
+      <!-- Title bar -->
+      <div class="vinyl-titlebar">
+        <div class="vinyl-buttons">
+          <span class="vinyl-btn vinyl-btn--close" aria-hidden="true"></span>
+          <span class="vinyl-btn vinyl-btn--minimize" aria-hidden="true"></span>
+          <span class="vinyl-btn vinyl-btn--maximize" aria-hidden="true"></span>
         </div>
-        <div class="vp-record-info">
-          <div class="vp-record-top">
-            <span class="vp-record-title">{{ record.title }}</span>
-            <span v-if="record.featured" class="vp-tag vp-tag--spinning">▶ spinning</span>
+        <span class="vinyl-title">janis@phyberapex: ~/interests/vinyl</span>
+      </div>
+
+      <!-- Terminal content -->
+      <div class="vinyl-content">
+        <!-- Header prompt -->
+        <div class="vinyl-prompt">
+          <span class="vinyl-user">janis@phyberapex</span>:<span class="vinyl-path">~/interests/vinyl</span>$ <span class="vinyl-cmd">cat README</span>
+        </div>
+
+        <div class="vinyl-output">
+          <div class="vinyl-readme">
+            <div class="vinyl-readme-title"># Vinyl Collection</div>
+            <div class="vinyl-readme-text">Game &amp; anime OSTs. All wall-mounted. A listening collection and a display.</div>
           </div>
-          <span class="vp-record-artist">{{ record.artist }}</span>
-          <span class="vp-record-note">{{ record.note }}</span>
         </div>
-      </li>
-    </ul>
 
-    <p class="vp-closing">Playing anything from the Cyberpunk 2077 or Hades OST? Tell me what I'm missing — <a href="https://www.linkedin.com/in/janis-walliser-41687278/" target="_blank" rel="noopener noreferrer">LinkedIn</a> is the best place to find me.</p>
+        <!-- Crate listing -->
+        <div class="vinyl-prompt">
+          <span class="vinyl-user">janis@phyberapex</span>:<span class="vinyl-path">~/interests/vinyl</span>$ <span class="vinyl-cmd">crate --list</span>
+        </div>
+
+        <div class="vinyl-output">
+          <div
+            v-for="(record, i) in records"
+            :key="record.title"
+            class="vinyl-record"
+            :class="{ 'vinyl-record--spinning': record.featured }"
+          >
+            <span class="vinyl-swatch" :style="{ background: record.color }" aria-hidden="true"></span>
+            <span class="vinyl-slot">{{ String(i + 1).padStart(2, '0') }}.</span>
+            <span class="vinyl-record-title">{{ record.title }}</span>
+            <span v-if="record.featured" class="vinyl-spinning-tag" aria-hidden="true">▶ spinning</span>
+            <div class="vinyl-record-meta">
+              <span class="vinyl-artist">{{ record.artist }}</span>
+              <span class="vinyl-sep" aria-hidden="true">·</span>
+              <span class="vinyl-note">{{ record.note }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Closing -->
+        <div class="vinyl-prompt">
+          <span class="vinyl-user">janis@phyberapex</span>:<span class="vinyl-path">~/interests/vinyl</span>$ <span class="vinyl-cursor" aria-hidden="true">█</span>
+        </div>
+
+        <div class="vinyl-prompt">
+          <span class="vinyl-user">janis@phyberapex</span>:<span class="vinyl-path">~/interests/vinyl</span>$ <span class="vinyl-cmd">cat CONTACT.txt</span>
+        </div>
+
+        <div class="vinyl-output">
+          <div class="vinyl-contact">
+            Playing anything from the Cyberpunk 2077 or Hades OST? Tell me what I'm missing — <a href="https://www.linkedin.com/in/janis-walliser-41687278/" target="_blank" rel="noopener noreferrer">find me on LinkedIn</a>.
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -44,160 +82,275 @@ const records = [
 </script>
 
 <style scoped>
-.vinyl-page {
-  background-color: var(--color-bg);
-  min-height: calc(100vh - var(--navbar-height));
-  padding: 2.5rem 2rem 4rem;
-  max-width: 780px;
-}
-
-/* ── Header ── */
-.vp-header {
-  margin-bottom: 2.5rem;
-}
-
-.vp-kicker {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  margin: 0 0 0.6rem;
-  opacity: 0.8;
-}
-
-.vp-title {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--color-text-1);
-  margin: 0 0 0.5rem;
-  letter-spacing: -0.01em;
-}
-
-.vp-subtitle {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  color: var(--color-text-2);
-  margin: 0;
-  line-height: 1.6;
-}
-
-/* ── Crate ── */
-.vp-crate {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* ── Root ── */
+.vinyl-root {
+  padding: 2rem 1rem 3rem;
   display: flex;
-  flex-direction: column;
-}
-
-.vp-record {
-  display: flex;
-  align-items: stretch;
-  border-bottom: 1px solid var(--color-border);
-  background: #0d1117;
-  transition: background 0.15s ease;
-}
-
-.vp-record:last-child { border-bottom: none; }
-.vp-record:hover { background: #161b22; }
-
-.vp-record--featured {
-  background: #101722;
-}
-
-/* ── Sleeve swatch ── */
-.vp-sleeve {
-  width: 52px;
-  flex-shrink: 0;
-  background: var(--sleeve-color, #30363d);
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: 0.5rem 0.4rem;
-  opacity: 0.9;
-}
-
-.vp-slot-num {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
-
-/* ── Record info ── */
-.vp-record-info {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding: 0.85rem 1rem;
-  gap: 0.15rem;
-  flex: 1;
-  min-width: 0;
+  min-height: calc(100vh - var(--navbar-height));
 }
 
-.vp-record-top {
+/* ── Terminal window ── */
+.vinyl-window {
+  width: 100%;
+  max-width: 920px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(27, 178, 229, 0.1);
+  overflow: hidden;
+  align-self: flex-start;
+}
+
+/* ── Title bar ── */
+.vinyl-titlebar {
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+  padding: 0.65rem 1rem;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.75rem;
-  flex-wrap: wrap;
 }
 
-.vp-record-title {
-  font-family: var(--font-mono);
-  font-size: 0.925rem;
-  font-weight: 600;
-  color: var(--color-text-1);
+.vinyl-buttons {
+  display: flex;
+  gap: 0.45rem;
 }
 
-.vp-record-artist {
-  font-family: var(--font-mono);
+.vinyl-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+  cursor: default;
+}
+
+.vinyl-btn--close { background: #ff5f57; }
+.vinyl-btn--minimize { background: #febc2e; }
+.vinyl-btn--maximize { background: #28c840; }
+
+.vinyl-titlebar:hover .vinyl-btn { opacity: 0.7; }
+
+.vinyl-title {
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.75rem;
-  color: var(--color-accent);
-  letter-spacing: 0.03em;
-}
-
-.vp-record-note {
-  font-family: var(--font-serif);
-  font-size: 0.875rem;
-  color: var(--color-text-2);
-  line-height: 1.45;
-  margin-top: 0.1rem;
-}
-
-/* ── Tags ── */
-.vp-tag {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.15rem 0.45rem;
-  border-radius: 3px;
-  border: 1px solid;
-  white-space: nowrap;
-}
-
-.vp-tag--spinning {
-  color: var(--color-accent);
-  border-color: rgba(27, 178, 229, 0.3);
-  background: rgba(27, 178, 229, 0.07);
-}
-
-/* ── Closing line ── */
-.vp-closing {
-  margin-top: 2rem;
-  font-family: var(--font-serif);
-  font-size: 0.875rem;
   color: var(--color-text-3);
+  flex: 1;
+  text-align: center;
+  margin-right: 60px;
+}
+
+/* ── Terminal content ── */
+.vinyl-content {
+  padding: 1.5rem 1.5rem;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
-.vp-closing a {
-  color: var(--color-accent);
-  text-decoration: none;
+/* ── Prompt ── */
+.vinyl-prompt {
+  color: var(--color-text-2);
+  margin: 1.75rem 0 0.65rem;
 }
 
-.vp-closing a:hover { text-decoration: underline; }
+.vinyl-prompt:first-child {
+  margin-top: 0;
+}
+
+.vinyl-user {
+  color: #56d364;
+  font-weight: 600;
+}
+
+.vinyl-path {
+  color: #1bb2e5;
+  font-weight: 600;
+}
+
+.vinyl-cmd {
+  color: var(--color-text-1);
+}
+
+.vinyl-cursor {
+  color: #1bb2e5;
+  animation: vinyl-blink 1.5s step-end infinite;
+}
+
+@keyframes vinyl-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* ── Output ── */
+.vinyl-output {
+  margin-bottom: 0.75rem;
+}
+
+.vinyl-readme {
+  padding: 0.75rem 0;
+}
+
+.vinyl-readme-title {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.vinyl-readme-text {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--color-text-2);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ── Record ── */
+.vinyl-record {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  border-left: 2px solid transparent;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  border-radius: 3px;
+}
+
+.vinyl-record:hover {
+  background: rgba(27, 178, 229, 0.05);
+  border-left-color: rgba(27, 178, 229, 0.2);
+}
+
+.vinyl-record--spinning {
+  background: rgba(27, 178, 229, 0.08);
+  border-left-color: rgba(27, 178, 229, 0.3);
+}
+
+.vinyl-record--spinning:hover {
+  background: rgba(27, 178, 229, 0.12);
+  border-left-color: rgba(27, 178, 229, 0.4);
+}
+
+.vinyl-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.vinyl-slot {
+  color: var(--color-text-3);
+  font-size: 0.8rem;
+  min-width: 2rem;
+}
+
+.vinyl-record-title {
+  color: #1bb2e5;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.vinyl-spinning-tag {
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  animation: vinyl-pulse 2s ease-in-out infinite;
+}
+
+@keyframes vinyl-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.vinyl-record-meta {
+  flex: 1 1 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem;
+  padding-left: 2.5rem;
+  margin-top: 0.15rem;
+}
+
+.vinyl-artist {
+  color: #88c0d0;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.vinyl-sep {
+  color: var(--color-border);
+  font-size: 0.75rem;
+}
+
+.vinyl-note {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--color-text-3);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* ── Contact ── */
+.vinyl-contact {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--color-text-2);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  padding-left: 0.65rem;
+  border-left: 1px solid rgba(27, 178, 229, 0.12);
+}
+
+.vinyl-contact a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(27, 178, 229, 0.4);
+  transition: text-decoration-color 0.15s ease;
+}
+
+.vinyl-contact a:hover {
+  text-decoration-color: var(--color-accent);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .vinyl-content {
+    padding: 1.25rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .vinyl-record-meta {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .vinyl-content {
+    font-size: 0.75rem;
+  }
+
+  .vinyl-record-meta {
+    padding-left: 0;
+  }
+
+  .vinyl-record {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .vinyl-cursor { animation: none; opacity: 1; }
+}
 </style>
