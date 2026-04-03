@@ -1,364 +1,446 @@
 <template>
-  <div class="pm-root">
+  <div class="term-root">
+    <!-- Terminal window for projects -->
+    <div class="term-window">
+      <!-- Title bar -->
+      <div class="term-titlebar">
+        <div class="term-buttons">
+          <span class="term-btn term-btn--close" aria-hidden="true"></span>
+          <span class="term-btn term-btn--minimize" aria-hidden="true"></span>
+          <span class="term-btn term-btn--maximize" aria-hidden="true"></span>
+        </div>
+        <span class="term-title">janis@phyberapex: ~/projects</span>
+      </div>
 
-    <!-- Masthead rule -->
-    <div class="pm-masthead" aria-hidden="true">
-      <span class="pm-deco">◈</span>
-      <span class="pm-rule-line"></span>
-      <span class="pm-rule-label">project manifest</span>
-      <span class="pm-rule-line"></span>
-      <span class="pm-deco">◈</span>
+      <!-- Terminal content -->
+      <div class="term-content">
+        <!-- Command prompt -->
+        <div class="term-prompt" aria-label="Command: list projects">
+          <span class="term-user">janis@phyberapex</span>:<span class="term-path">~/projects</span>$ <span class="term-cmd">ls -la</span>
+        </div>
+
+        <!-- Project listing -->
+        <div class="term-output">
+          <router-link
+            v-for="(project, i) in PROJECTS"
+            :key="project.slug"
+            :to="`/projects/${project.slug}`"
+            class="term-line"
+            :class="[`term-line--${project.status}`, { 'term-line--featured': project.featured }]"
+            :style="{ '--delay': `${i * 40}ms` }"
+          >
+            <span class="term-perms" aria-hidden="true">drwxr-xr-x</span>
+            <span class="term-links" aria-hidden="true">8</span>
+            <span class="term-status">{{ project.status.padEnd(10) }}</span>
+            <span class="term-project">{{ project.slug }}/</span>
+            <div class="term-desc">→ {{ project.tagline }}</div>
+            <div class="term-stack">[{{ project.stack.join(' · ') }}]</div>
+          </router-link>
+        </div>
+
+        <!-- Cursor -->
+        <div class="term-prompt">
+          <span class="term-user">janis@phyberapex</span>:<span class="term-path">~/projects</span>$ <span class="term-cursor" aria-hidden="true">█</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Project entries -->
-    <ol class="pm-list" aria-label="Projects">
-      <li
-        v-for="(project, i) in PROJECTS"
-        :key="project.slug"
-        class="pm-entry"
-        :class="{ 'pm-entry--featured': project.featured, [`pm-entry--${project.status}`]: true }"
-        :style="{ '--delay': `${i * 55}ms` }"
-      >
-        <router-link :to="`/projects/${project.slug}`" class="pm-link">
+    <!-- OSS terminal window -->
+    <div class="term-window">
+      <div class="term-titlebar">
+        <div class="term-buttons">
+          <span class="term-btn term-btn--close" aria-hidden="true"></span>
+          <span class="term-btn term-btn--minimize" aria-hidden="true"></span>
+          <span class="term-btn term-btn--maximize" aria-hidden="true"></span>
+        </div>
+        <span class="term-title">janis@phyberapex: ~/oss</span>
+      </div>
 
-          <span class="pm-idx" aria-hidden="true">{{ String(i + 1).padStart(3, '0') }}.</span>
+      <div class="term-content">
+        <div class="term-prompt" aria-label="Command: show contributions">
+          <span class="term-user">janis@phyberapex</span>:<span class="term-path">~/oss</span>$ <span class="term-cmd">cat CONTRIBUTIONS</span>
+        </div>
 
-          <div class="pm-body">
-            <div class="pm-namerow">
-              <h2 class="pm-name">{{ project.name }}</h2>
-              <span class="pm-status" :class="`pm-status--${project.status}`">{{ STATUS_LABELS[project.status] }}</span>
-            </div>
-
-            <p class="pm-tagline">{{ project.tagline }}</p>
-
-            <p v-if="project.featured && project.detail" class="pm-detail">{{ project.detail }}</p>
-
-            <div class="pm-stack" aria-label="Tech stack">
-              <span v-for="(tech, j) in project.stack" :key="tech">
-                <span v-if="j > 0" class="pm-sep" aria-hidden="true"> · </span>{{ tech }}
-              </span>
-            </div>
-          </div>
-
-        </router-link>
-      </li>
-    </ol>
-
-    <!-- Open-source contributions -->
-    <section class="pm-oss" aria-labelledby="pm-oss-heading">
-      <h2 class="pm-oss-heading" id="pm-oss-heading">
-        <span class="pm-oss-icon" aria-hidden="true">◎</span>
-        open source contributions
-        <span class="pm-oss-rule" aria-hidden="true"></span>
-      </h2>
-      <ul class="pm-oss-list">
-        <li v-for="c in CONTRIB" :key="c.name" class="pm-oss-entry">
-          <a :href="c.url" class="pm-oss-link" target="_blank" rel="noopener noreferrer">{{ c.name }}</a>
-          <span class="pm-oss-desc"> — {{ c.desc }}</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Footer divider -->
-    <div class="pm-footer-divider" aria-hidden="true"></div>
-
+        <div class="term-output">
+          <a
+            v-for="c in CONTRIB"
+            :key="c.name"
+            :href="c.url"
+            class="term-line term-oss-line"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="term-oss-bullet" aria-hidden="true">▸</span>
+            <span class="term-oss-name">{{ c.name }}</span>
+            <span class="term-external-icon" aria-label="External link">↗</span>
+            <div class="term-oss-desc">  {{ c.desc }}</div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { PROJECTS, CONTRIB, STATUS_LABELS } from '../../data/projects.js'
+import { PROJECTS, CONTRIB } from '../../data/projects.js'
 </script>
 
 <style scoped>
 /* ── Root ── */
-.pm-root {
-  padding: 0 0 2rem;
+.term-root {
+  padding: 2rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* ── Masthead rule ── */
-.pm-masthead {
+/* ── Terminal window ── */
+.term-window {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(27, 178, 229, 0.1);
+  overflow: hidden;
+  animation: term-enter 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes term-enter {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Title bar ── */
+.term-titlebar {
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+  padding: 0.65rem 1rem;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.5rem 0 1.5rem;
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.22em;
-  color: var(--color-accent);
-  text-transform: uppercase;
+  gap: 0.75rem;
 }
 
-.pm-footer-divider {
-  margin-top: 2rem;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--color-border), transparent 90%);
-}
-
-.pm-rule-line {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(27, 178, 229, 0.25), transparent 90%);
-}
-
-.pm-deco { flex-shrink: 0; opacity: 0.55; }
-.pm-rule-label { flex-shrink: 0; }
-
-/* ── OSS section header ── */
-.pm-oss {
-  margin-top: 3rem;
-}
-
-.pm-oss-heading {
+.term-buttons {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin: 0 0 1rem;
-  color: var(--color-text-3);
+  gap: 0.45rem;
 }
 
-.pm-oss-icon {
+.term-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+  cursor: default;
+}
+
+.term-btn--close {
+  background: #ff5f57;
+}
+
+.term-btn--minimize {
+  background: #febc2e;
+}
+
+.term-btn--maximize {
+  background: #28c840;
+}
+
+.term-titlebar:hover .term-btn {
   opacity: 0.7;
 }
 
-.pm-oss-rule {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(to right, rgba(27, 178, 229, 0.15), transparent);
-}
-
-/* ── Project list ── */
-.pm-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.pm-entry {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 3px;
-  animation: pm-enter 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
-  animation-delay: var(--delay, 0ms);
-}
-
-@keyframes pm-enter {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* ── Entry link (full-row clickable) ── */
-.pm-link {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  padding: 1.1rem 0.5rem 1.1rem 0;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  transition: background 0.2s ease;
-  border-radius: 3px;
-  margin: 0 -0.5rem;
-  padding-left: 0.5rem;
-}
-
-/* Scan-line sweep on hover */
-.pm-link::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 0%, rgba(27, 178, 229, 0.055) 50%, transparent 100%);
-  height: 200%;
-  top: -100%;
-  transition: top 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-  pointer-events: none;
-}
-
-.pm-link:hover::before { top: 100%; }
-.pm-link:hover .pm-name { color: var(--color-accent); }
-.pm-link:hover .pm-arrow { transform: translateX(5px); }
-
-/* ── Entry index number ── */
-.pm-idx {
+.term-title {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.65rem;
-  font-weight: 400;
+  font-size: 0.75rem;
   color: var(--color-text-3);
-  flex-shrink: 0;
-  width: 2.8rem;
-  padding-top: 0.22rem;
-  letter-spacing: 0.06em;
-  user-select: none;
-}
-
-/* ── Entry body ── */
-.pm-body {
   flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+  text-align: center;
+  margin-right: 60px; /* offset buttons width */
 }
 
-/* ── Name row ── */
-.pm-namerow {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-h2.pm-name {
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  color: var(--color-text-1);
-  margin: 0;
-  padding: 0;
-  border: none;
-  transition: color 0.18s ease;
-}
-
-.pm-entry--featured {
-  background: rgba(27, 178, 229, 0.03);
-  border-radius: 3px;
-}
-
-.pm-entry--featured .pm-link {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 1rem;
-  border-left: 2px solid rgba(27, 178, 229, 0.2);
-}
-
-.pm-entry--featured h2.pm-name {
-  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
-}
-
-/* ── Status label ── */
-.pm-status {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.08em;
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-
-.pm-status--active     { color: var(--color-accent); }
-.pm-status--maintained { color: #88c0d0; }
-.pm-status--archived   { color: var(--color-text-3); opacity: 0.6; }
-
-/* ── Tagline ── */
-.pm-tagline {
-  font-family: Georgia, 'Times New Roman', serif;
+/* ── Terminal content ── */
+.term-content {
+  padding: 1.5rem 1.5rem;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
   font-size: 0.875rem;
-  font-weight: 400;
-  color: var(--color-text-2);
   line-height: 1.6;
-  margin: 0;
 }
 
-/* ── Detail (featured projects only) ── */
-.pm-detail {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 0.86rem;
-  font-weight: 400;
+/* OSS window - more compact */
+.term-window:last-child .term-content {
+  padding: 1rem 1.5rem;
+}
+
+/* ── Prompt ── */
+.term-prompt {
   color: var(--color-text-2);
-  line-height: 1.65;
-  margin: 0.1rem 0 0;
-  opacity: 0.85;
+  margin-bottom: 0.75rem;
 }
 
-/* ── Tech stack ── */
-.pm-stack {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
+.term-user {
+  color: #56d364;
+  font-weight: 600;
+}
+
+.term-path {
+  color: #1bb2e5;
+  font-weight: 600;
+}
+
+.term-cmd {
+  color: var(--color-text-1);
+}
+
+.term-cursor {
+  color: #1bb2e5;
+  animation: term-blink 1.2s step-end infinite;
+}
+
+@keyframes term-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* ── Output ── */
+.term-output {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 1rem;
+}
+
+/* ── Project line ── */
+.term-line {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.4rem 0.5rem;
+  text-decoration: none;
+  color: var(--color-text-1);
+  border-radius: 3px;
+  transition: background 0.15s ease;
+  animation: term-line-enter 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--delay, 0ms);
+  position: relative;
+}
+
+@keyframes term-line-enter {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.term-line:hover {
+  background: rgba(27, 178, 229, 0.08);
+}
+
+.term-line--featured {
+  background: rgba(27, 178, 229, 0.12);
+  border-left: 3px solid rgba(27, 178, 229, 0.4);
+  padding-left: 1rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.term-line--featured:hover {
+  background: rgba(27, 178, 229, 0.18);
+  border-left-color: rgba(27, 178, 229, 0.6);
+}
+
+.term-line--featured .term-project {
+  font-size: 1.05em;
+  font-weight: 700;
+}
+
+.term-line--featured .term-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-1);
+}
+
+/* ── Line columns ── */
+.term-perms {
   color: var(--color-text-3);
-  margin-top: 0.35rem;
-  letter-spacing: 0.02em;
+  margin-right: 0.75rem;
+  font-size: 0.8rem;
+}
+
+.term-links {
+  color: var(--color-text-3);
+  margin-right: 0.75rem;
+  width: 1.5rem;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.term-status {
+  margin-right: 0.75rem;
+  font-weight: 600;
+  min-width: 80px;
+}
+
+.term-line--active .term-status {
+  color: #56d364;
+}
+
+.term-line--maintained .term-status {
+  color: #88c0d0;
+}
+
+.term-line--archived .term-status {
+  color: var(--color-text-3);
+  opacity: 0.7;
+}
+
+.term-project {
+  color: #1bb2e5;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.term-desc {
+  flex: 1 1 100%;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--color-text-2);
+  padding-left: 9.5rem;
+  margin-top: 0.15rem;
+  font-size: 0.85rem;
   line-height: 1.5;
 }
 
-.pm-sep {
-  color: var(--color-text-muted);
-  opacity: 0.6;
-}
-
-
-/* ── OSS contributions list ── */
-.pm-oss-list {
-  list-style: none;
-  padding: 0 0 0 1rem;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  border-left: 2px solid rgba(27, 178, 229, 0.15);
-}
-
-.pm-oss-entry {
-  line-height: 1.6;
-}
-
-.pm-oss-link {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.8rem;
-  color: var(--color-text-1);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  text-decoration-color: rgba(27, 178, 229, 0.35);
-  transition: color 0.15s ease, text-decoration-color 0.15s ease;
-}
-
-.pm-oss-link:hover {
-  color: var(--color-accent);
-  text-decoration-color: var(--color-accent);
-}
-
-.pm-oss-desc {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 0.84rem;
+.term-stack {
+  flex: 1 1 100%;
   color: var(--color-text-3);
+  padding-left: 9.5rem;
+  margin-top: 0.15rem;
+  font-size: 0.75rem;
 }
 
-/* ── Archived entries: visually de-emphasized ── */
-.pm-entry--archived h2.pm-name { color: var(--color-text-3); }
-.pm-entry--archived .pm-tagline,
-.pm-entry--archived .pm-stack {
+/* ── OSS lines ── */
+.term-oss-line {
+  display: block;
+  padding: 0.35rem 0.5rem;
+  text-decoration: none;
+  color: var(--color-text-1);
+  border-radius: 3px;
+  transition: background 0.15s ease;
+}
+
+.term-oss-line:hover {
+  background: rgba(27, 178, 229, 0.08);
+}
+
+.term-oss-bullet {
+  color: #1bb2e5;
+  margin-right: 0.5rem;
+}
+
+.term-oss-name {
+  color: #1bb2e5;
+  font-weight: 600;
+}
+
+.term-external-icon {
+  color: var(--color-text-3);
+  font-size: 0.75rem;
+  margin-left: 0.3rem;
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+}
+
+.term-oss-line:hover .term-external-icon {
+  opacity: 1;
+  color: #56d364;
+}
+
+.term-oss-desc {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--color-text-3);
+  font-size: 0.85rem;
+  padding-left: 1.5rem;
+  margin-top: 0.1rem;
+  line-height: 1.5;
+}
+
+/* ── Archived styling ── */
+.term-line--archived .term-status,
+.term-line--archived .term-project {
   opacity: 0.6;
 }
-.pm-entry--archived:hover h2.pm-name { color: var(--color-text-1); }
+
+.term-line--archived .term-desc,
+.term-line--archived .term-stack {
+  opacity: 0.7;
+}
+
+.term-line--archived:hover .term-status,
+.term-line--archived:hover .term-project {
+  opacity: 0.85;
+}
+
+.term-line--archived:hover .term-desc,
+.term-line--archived:hover .term-stack {
+  opacity: 0.9;
+}
 
 /* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
-  .pm-entry { animation: none; }
-  .pm-link::before { display: none; }
+  .term-window { animation: none; }
+  .term-line { animation: none; }
+  .term-cursor { animation: none; opacity: 1; }
 }
 
 /* ── Responsive ── */
-@media (max-width: 480px) {
-  .pm-idx { display: none; }
-  .pm-link { padding: 0.9rem 0.5rem; margin: 0; }
-
-  .pm-entry--featured .pm-link {
-    padding-left: 0.75rem;
+@media (max-width: 768px) {
+  .term-root {
+    padding: 1.5rem 0.75rem 2.5rem;
   }
 
-  h2.pm-name { font-size: 1rem; }
-  .pm-entry--featured h2.pm-name { font-size: 1.1rem; }
+  .term-content {
+    padding: 1rem 1rem;
+    font-size: 0.8rem;
+  }
 
-  .pm-oss-list {
-    padding-left: 0.65rem;
+  .term-title {
+    font-size: 0.7rem;
+  }
+
+  .term-perms,
+  .term-links {
+    display: none;
+  }
+
+  .term-desc,
+  .term-stack {
+    padding-left: 6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .term-content {
+    font-size: 0.75rem;
+  }
+
+  .term-status {
+    min-width: 70px;
+  }
+
+  .term-desc,
+  .term-stack {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .term-line {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .term-line--featured {
+    padding-left: 0.75rem;
+    border-left-width: 2px;
   }
 }
 </style>
