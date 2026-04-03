@@ -203,7 +203,7 @@
 </template>
 
 <script setup>
-import resumeData from '../../../resume.json'
+import resumeData from '@data/resume.json'
 
 const data = resumeData
 
@@ -256,7 +256,7 @@ function formatYear(dateStr) {
   align-items: flex-start;
   gap: 2rem;
   padding-bottom: 1.75rem;
-  border-bottom: 2px solid #1a5fa8;
+  border-bottom: 2px solid #1bb2e5;
   margin-bottom: 2rem;
 }
 
@@ -266,12 +266,10 @@ function formatYear(dateStr) {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 3px solid #1a5fa8;
+  border: 3px solid #1bb2e5;
 }
 
-.resume-header-info {
-  flex: 1;
-}
+.resume-header-info { flex: 1; }
 
 .resume-name {
   font-size: 2rem;
@@ -285,7 +283,7 @@ function formatYear(dateStr) {
 
 .resume-label {
   font-size: 1.05rem;
-  color: #1a5fa8;
+  color: #006fa0;
   font-weight: 600;
   margin: 0 0 0.75rem;
 }
@@ -307,72 +305,51 @@ function formatYear(dateStr) {
   text-decoration: none;
 }
 
-.contact-item:hover {
-  color: #1a5fa8;
-}
+.contact-item:hover { color: #006fa0; }
+.contact-icon { font-size: 0.85rem; }
 
-.contact-icon {
-  font-size: 0.85rem;
-}
-
-.resume-profiles {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
+.resume-profiles { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 
 .profile-badge {
   display: inline-block;
   padding: 0.2rem 0.7rem;
   border-radius: 999px;
-  background: #e8f0fb;
-  color: #1a5fa8;
+  background: #e0f7fa;
+  color: #006fa0;
   font-size: 0.78rem;
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid #b3cef0;
+  border: 1px solid #a5e5f5;
 }
 
-.profile-badge:hover {
-  background: #1a5fa8;
-  color: #fff;
-}
+.profile-badge:hover { background: #006fa0; color: #fff; }
 
 /* ── Sections ── */
-.resume-section {
-  margin-bottom: 2rem;
-}
+.resume-section { margin-bottom: 2rem; }
 
 .section-title {
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #1a5fa8;
-  border-bottom: 1px solid #dbeafe;
+  color: #006fa0;
+  border-bottom: 1px solid #b3e5fc;
   padding-bottom: 0.35rem;
   margin: 0 0 1rem;
   border-top: none;
   background: none;
 }
 
-.resume-summary {
-  line-height: 1.75;
-  color: #334155;
-  margin: 0;
-}
+.resume-summary { line-height: 1.75; color: #334155; margin: 0; }
 
 /* ── Timeline ── */
 .timeline {
   position: relative;
   padding-left: 1.25rem;
-  border-left: 2px solid #dbeafe;
+  border-left: 2px solid #b3e5fc;
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 1.75rem;
-}
+.timeline-item { position: relative; margin-bottom: 1.75rem; }
 
 .timeline-dot {
   position: absolute;
@@ -381,14 +358,12 @@ function formatYear(dateStr) {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #1a5fa8;
+  background: #1bb2e5;
   border: 2px solid #fff;
-  box-shadow: 0 0 0 2px #dbeafe;
+  box-shadow: 0 0 0 2px #b3e5fc;
 }
 
-.timeline-content {
-  padding-left: 0.5rem;
-}
+.timeline-content { padding-left: 0.5rem; }
 
 .job-header {
   display: flex;
@@ -399,64 +374,20 @@ function formatYear(dateStr) {
   margin-bottom: 0.4rem;
 }
 
-.job-title-block {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.15rem;
-}
-
-.job-position {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #0f172a;
-}
-
-.job-sep {
-  color: #94a3b8;
-}
-
-.job-company {
-  font-size: 0.9rem;
-  color: #1a5fa8;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.job-company:hover {
-  text-decoration: underline;
-}
-
-.job-location {
-  font-size: 0.82rem;
-  color: #94a3b8;
-}
-
-.job-dates {
-  font-size: 0.8rem;
-  color: #94a3b8;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.job-summary {
-  font-size: 0.875rem;
-  line-height: 1.7;
-  color: #475569;
-  margin: 0;
-}
+.job-title-block { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.15rem; }
+.job-position { font-size: 0.95rem; font-weight: 700; color: #0f172a; }
+.job-sep { color: #94a3b8; }
+.job-company { font-size: 0.9rem; color: #006fa0; font-weight: 600; text-decoration: none; }
+.job-company:hover { text-decoration: underline; }
+.job-location { font-size: 0.82rem; color: #94a3b8; }
+.job-dates { font-size: 0.8rem; color: #94a3b8; white-space: nowrap; flex-shrink: 0; }
+.job-summary { font-size: 0.875rem; line-height: 1.7; color: #475569; margin: 0; }
 
 /* ── Two column ── */
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 3rem;
-}
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 3rem; }
 
 /* ── Skills ── */
-.skill-group {
-  margin-bottom: 0.9rem;
-}
+.skill-group { margin-bottom: 0.9rem; }
 
 .skill-name {
   font-size: 0.78rem;
@@ -470,28 +401,20 @@ function formatYear(dateStr) {
   background: none;
 }
 
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-}
+.skill-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
 
 .skill-tag {
   display: inline-block;
   padding: 0.18rem 0.55rem;
   border-radius: 4px;
-  background: #e8f0fb;
-  color: #1a5fa8;
+  background: #e0f7fa;
+  color: #006fa0;
   font-size: 0.77rem;
   font-weight: 500;
-  border: 1px solid #b3cef0;
+  border: 1px solid #a5e5f5;
 }
 
-.skill-tag--muted {
-  background: #f1f5f9;
-  color: #475569;
-  border-color: #e2e8f0;
-}
+.skill-tag--muted { background: #f1f5f9; color: #475569; border-color: #e2e8f0; }
 
 /* ── Education ── */
 .edu-card {
@@ -502,52 +425,15 @@ function formatYear(dateStr) {
   background: #f8fafc;
 }
 
-.edu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.edu-institution {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin: 0 0 0.1rem;
-}
-
-.edu-degree {
-  font-size: 0.82rem;
-  color: #64748b;
-  margin: 0;
-}
-
-.edu-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.15rem;
-}
-
-.edu-dates {
-  font-size: 0.78rem;
-  color: #94a3b8;
-  white-space: nowrap;
-}
-
-.edu-score {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: #1a5fa8;
-}
+.edu-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap; }
+.edu-institution { font-size: 0.9rem; font-weight: 700; color: #0f172a; margin: 0 0 0.1rem; }
+.edu-degree { font-size: 0.82rem; color: #64748b; margin: 0; }
+.edu-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.15rem; }
+.edu-dates { font-size: 0.78rem; color: #94a3b8; white-space: nowrap; }
+.edu-score { font-size: 0.78rem; font-weight: 600; color: #006fa0; }
 
 /* ── Certificates ── */
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0.7rem;
-}
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.7rem; }
 
 .cert-card {
   display: flex;
@@ -562,274 +448,80 @@ function formatYear(dateStr) {
   color: inherit;
 }
 
-.cert-card:hover {
-  border-color: #1a5fa8;
-  box-shadow: 0 2px 8px rgba(26, 95, 168, 0.12);
-}
-
-.cert-name {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #0f172a;
-  line-height: 1.35;
-}
-
-.cert-meta {
-  font-size: 0.76rem;
-  color: #94a3b8;
-}
+.cert-card:hover { border-color: #006fa0; box-shadow: 0 2px 8px rgba(26, 95, 168, 0.12); }
+.cert-name { font-size: 0.85rem; font-weight: 600; color: #0f172a; line-height: 1.35; }
+.cert-meta { font-size: 0.76rem; color: #94a3b8; }
 
 /* ── Projects ── */
-.project-item {
-  margin-bottom: 1.2rem;
-  padding-bottom: 1.2rem;
-  border-bottom: 1px solid #f1f5f9;
-}
-
-.project-item:last-child {
-  border-bottom: none;
-}
-
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  margin-bottom: 0.3rem;
-}
-
-.project-name {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #1a5fa8;
-  text-decoration: none;
-}
-
-.project-name:hover {
-  text-decoration: underline;
-}
-
-.project-date {
-  font-size: 0.78rem;
-  color: #94a3b8;
-}
-
-.project-desc {
-  font-size: 0.85rem;
-  line-height: 1.65;
-  color: #475569;
-  margin: 0;
-}
+.project-item { margin-bottom: 1.2rem; padding-bottom: 1.2rem; border-bottom: 1px solid #f1f5f9; }
+.project-item:last-child { border-bottom: none; }
+.project-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.25rem; margin-bottom: 0.3rem; }
+.project-name { font-size: 0.9rem; font-weight: 700; color: #006fa0; text-decoration: none; }
+.project-name:hover { text-decoration: underline; }
+.project-date { font-size: 0.78rem; color: #94a3b8; }
+.project-desc { font-size: 0.85rem; line-height: 1.65; color: #475569; margin: 0; }
 
 /* ── Publications / Awards ── */
-.pub-item {
-  margin-bottom: 0.9rem;
-}
-
-.pub-row {
-  margin: 0 0 0.15rem;
-}
-
-.pub-name {
-  font-weight: 600;
-  font-size: 0.875rem;
-  color: #1a5fa8;
-  text-decoration: none;
-}
-
-.pub-name:hover {
-  text-decoration: underline;
-}
-
-.pub-meta {
-  font-size: 0.8rem;
-  color: #94a3b8;
-}
-
-.pub-summary {
-  font-size: 0.82rem;
-  color: #64748b;
-  margin: 0;
-}
-
-.award-title {
-  font-weight: 700;
-  font-size: 0.875rem;
-  color: #0f172a;
-}
+.pub-item { margin-bottom: 0.9rem; }
+.pub-row { margin: 0 0 0.15rem; }
+.pub-name { font-weight: 600; font-size: 0.875rem; color: #006fa0; text-decoration: none; }
+.pub-name:hover { text-decoration: underline; }
+.pub-meta { font-size: 0.8rem; color: #94a3b8; }
+.pub-summary { font-size: 0.82rem; color: #64748b; margin: 0; }
+.award-title { font-weight: 700; font-size: 0.875rem; color: #0f172a; }
 
 /* ── Volunteer ── */
-.vol-item {
-  margin-bottom: 1rem;
-}
+.vol-item { margin-bottom: 1rem; }
 
 /* ── Languages + Interests ── */
-.simple-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.9;
-  color: #334155;
-}
-
-.simple-list strong {
-  color: #0f172a;
-}
-
-.interest-name {
-  font-weight: 600;
-  font-size: 0.875rem;
-  color: #0f172a;
-  margin: 0 0 0.35rem;
-}
+.simple-list { list-style: none; padding: 0; margin: 0; font-size: 0.875rem; line-height: 1.9; color: #334155; }
+.simple-list strong { color: #0f172a; }
+.interest-name { font-weight: 600; font-size: 0.875rem; color: #0f172a; margin: 0 0 0.35rem; }
 
 /* ── References ── */
-.ref-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1rem;
-}
+.ref-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
 
 .ref-card {
   border: 1px solid #e2e8f0;
-  border-left: 4px solid #1a5fa8;
+  border-left: 4px solid #1bb2e5;
   border-radius: 6px;
   padding: 1rem;
   margin: 0;
   background: #f8fafc;
 }
 
-.ref-text {
-  font-size: 0.83rem;
-  line-height: 1.65;
-  color: #475569;
-  font-style: italic;
-  margin: 0 0 0.5rem;
-}
-
-.ref-name {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #0f172a;
-}
+.ref-text { font-size: 0.83rem; line-height: 1.65; color: #475569; font-style: italic; margin: 0 0 0.5rem; }
+.ref-name { font-size: 0.8rem; font-weight: 700; color: #0f172a; }
 
 /* ── Print ── */
 @media print {
-  .resume-en {
-    padding: 0;
-    max-width: none;
-    font-size: 10pt;
-  }
-
-  .resume-header {
-    border-color: #000;
-  }
-
-  .resume-photo {
-    border-color: #000;
-  }
-
-  .section-title {
-    color: #000;
-    border-color: #ccc;
-  }
-
-  .timeline {
-    border-color: #ccc;
-  }
-
-  .timeline-dot {
-    background: #000;
-    box-shadow: none;
-  }
-
-  .cert-card,
-  .edu-card,
-  .ref-card {
-    border-color: #ccc;
-    background: #fff;
-    box-shadow: none;
-  }
-
-  .ref-card {
-    border-left-color: #000;
-  }
-
-  .skill-tag {
-    background: #f0f0f0;
-    color: #000;
-    border-color: #ccc;
-  }
-
-  .profile-badge {
-    background: #f0f0f0;
-    color: #000;
-    border-color: #ccc;
-  }
-
-  .resume-name,
-  .resume-label,
-  .job-position,
-  .job-company,
-  .project-name,
-  .pub-name,
-  .edu-institution,
-  .award-title {
-    color: #000;
-  }
-
-  .resume-label,
-  .job-company,
-  .project-name,
-  .pub-name,
-  .edu-score {
-    color: #000;
-  }
-
-  a {
-    color: #000;
-    text-decoration: none;
-  }
-
-  .resume-section {
-    page-break-inside: avoid;
-  }
-
-  .resume-header {
-    page-break-inside: avoid;
-  }
+  .resume-en { padding: 0; max-width: none; font-size: 10pt; }
+  .resume-header { border-color: #000; }
+  .resume-photo { border-color: #000; }
+  .section-title { color: #000; border-color: #ccc; }
+  .timeline { border-color: #ccc; }
+  .timeline-dot { background: #000; box-shadow: none; }
+  .cert-card, .edu-card, .ref-card { border-color: #ccc; background: #fff; box-shadow: none; }
+  .ref-card { border-left-color: #000; }
+  .skill-tag { background: #f0f0f0; color: #000; border-color: #ccc; }
+  .profile-badge { background: #f0f0f0; color: #000; border-color: #ccc; }
+  .resume-name, .resume-label, .job-position, .job-company, .project-name, .pub-name, .edu-institution, .award-title,
+  .job-company, .project-name, .pub-name, .edu-score { color: #000; }
+  a { color: #000; text-decoration: none; }
+  .resume-section { page-break-inside: avoid; }
+  .resume-header { page-break-inside: avoid; }
 }
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
-  .two-col {
-    grid-template-columns: 1fr;
-  }
-
-  .cert-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ref-grid {
-    grid-template-columns: 1fr;
-  }
+  .two-col { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: 1fr; }
+  .ref-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 500px) {
-  .resume-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .resume-contact {
-    justify-content: center;
-  }
-
-  .resume-profiles {
-    justify-content: center;
-  }
+  .resume-header { flex-direction: column; align-items: center; text-align: center; }
+  .resume-contact { justify-content: center; }
+  .resume-profiles { justify-content: center; }
 }
 </style>
