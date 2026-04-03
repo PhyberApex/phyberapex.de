@@ -46,11 +46,11 @@
 
     <!-- Open-source contributions -->
     <section class="pm-oss" aria-labelledby="pm-oss-heading">
-      <div class="pm-rule pm-rule--minor" aria-hidden="true">
-        <span class="pm-rule-line"></span>
-        <span class="pm-rule-label" id="pm-oss-heading">open source contributions</span>
-        <span class="pm-rule-line"></span>
-      </div>
+      <h2 class="pm-oss-heading" id="pm-oss-heading">
+        <span class="pm-oss-icon" aria-hidden="true">◎</span>
+        open source contributions
+        <span class="pm-oss-rule" aria-hidden="true"></span>
+      </h2>
       <ul class="pm-oss-list">
         <li v-for="c in CONTRIB" :key="c.name" class="pm-oss-entry">
           <a :href="c.url" class="pm-oss-link" target="_blank" rel="noopener noreferrer">{{ c.name }}</a>
@@ -91,33 +91,44 @@ import { PROJECTS, CONTRIB, STATUS_LABELS } from '../../data/projects.js'
 .pm-footer-divider {
   margin-top: 2rem;
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--color-border), transparent);
+  background: linear-gradient(to right, transparent, var(--color-border), transparent 90%);
 }
 
 .pm-rule-line {
   flex: 1;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(27, 178, 229, 0.25), transparent);
+  background: linear-gradient(to right, transparent, rgba(27, 178, 229, 0.25), transparent 90%);
 }
 
 .pm-deco { flex-shrink: 0; opacity: 0.55; }
 .pm-rule-label { flex-shrink: 0; }
 
-/* ── Minor rule (before OSS section) ── */
-.pm-rule--minor {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.22em;
-  color: var(--color-text-3);
-  text-transform: uppercase;
-  margin: 2rem 0 1.25rem;
+/* ── OSS section header ── */
+.pm-oss {
+  margin-top: 3rem;
 }
 
-.pm-rule--minor .pm-rule-line {
-  background: linear-gradient(to right, transparent, var(--color-border), transparent);
+.pm-oss-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+  color: var(--color-text-3);
+}
+
+.pm-oss-icon {
+  opacity: 0.7;
+}
+
+.pm-oss-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(27, 178, 229, 0.15), transparent);
 }
 
 /* ── Project list ── */
@@ -125,16 +136,17 @@ import { PROJECTS, CONTRIB, STATUS_LABELS } from '../../data/projects.js'
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
 }
 
 .pm-entry {
-  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
   animation: pm-enter 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: var(--delay, 0ms);
-}
-
-.pm-entry:first-child {
-  border-top: 1px solid var(--color-border);
 }
 
 @keyframes pm-enter {
@@ -216,8 +228,21 @@ h2.pm-name {
   transition: color 0.18s ease;
 }
 
-.pm-entry--featured h2.pm-name { font-size: clamp(1.15rem, 2.5vw, 1.5rem); }
-.pm-entry--featured .pm-link { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.pm-entry--featured {
+  background: rgba(27, 178, 229, 0.03);
+  border-radius: 3px;
+}
+
+.pm-entry--featured .pm-link {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(27, 178, 229, 0.2);
+}
+
+.pm-entry--featured h2.pm-name {
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+}
 
 /* ── Status label ── */
 .pm-status {
@@ -258,30 +283,35 @@ h2.pm-name {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
   color: var(--color-text-3);
-  margin-top: 0.25rem;
+  margin-top: 0.35rem;
   letter-spacing: 0.02em;
-}
-
-.pm-sep { color: var(--color-text-muted); }
-
-
-/* ── OSS contributions ── */
-.pm-oss-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.pm-oss-entry {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.8rem;
   line-height: 1.5;
 }
 
+.pm-sep {
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
+
+
+/* ── OSS contributions list ── */
+.pm-oss-list {
+  list-style: none;
+  padding: 0 0 0 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  border-left: 2px solid rgba(27, 178, 229, 0.15);
+}
+
+.pm-oss-entry {
+  line-height: 1.6;
+}
+
 .pm-oss-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
   color: var(--color-text-1);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -296,8 +326,9 @@ h2.pm-name {
 }
 
 .pm-oss-desc {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.84rem;
   color: var(--color-text-3);
-  font-size: 0.75rem;
 }
 
 /* ── Archived entries: visually de-emphasized ── */
@@ -317,8 +348,17 @@ h2.pm-name {
 /* ── Responsive ── */
 @media (max-width: 480px) {
   .pm-idx { display: none; }
-  .pm-link { padding: 0.9rem 0.25rem; margin: 0 -0.25rem; }
+  .pm-link { padding: 0.9rem 0.5rem; margin: 0; }
+
+  .pm-entry--featured .pm-link {
+    padding-left: 0.75rem;
+  }
+
   h2.pm-name { font-size: 1rem; }
   .pm-entry--featured h2.pm-name { font-size: 1.1rem; }
+
+  .pm-oss-list {
+    padding-left: 0.65rem;
+  }
 }
 </style>
