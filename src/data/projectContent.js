@@ -1,4 +1,50 @@
 export const PROJECT_CONTENT = {
+  karakuri: {
+    title: 'Karakuri',
+    github: 'https://karakuri.phyberapex.de/docs/',
+    tech: 'Vue 3, NestJS, Socket.IO, Docker',
+    status: 'active',
+    intro: 'からくり — mechanical puppet. Homelab dashboard that turns a Raspberry Pi into an AI workshop. Manages llama-server for LLM inference, Qwen3-TTS for voice synthesis, and ComfyUI for image generation. Live monitoring of CPU, RAM, and VRAM. An animated PNGTuber avatar speaks via AI-generated voice and reacts to system state. Built for tinkering.',
+    sections: [
+      {
+        type: 'features',
+        heading: 'What it does',
+        items: [
+          'Manual GPU service control — start, stop, restart AI services subject to VRAM limits',
+          'Real-time system monitoring: CPU, RAM, VRAM, disk usage',
+          'Model management — browse HuggingFace, search CivitAI, download models via multiple protocols',
+          'Load and unload GGUF models via llama-server router mode',
+          'Image generation UI with ComfyUI workflow triggers and output gallery',
+          'TTS voice synthesis with Qwen3-TTS and Kokoro fallback',
+          'Live per-service log streaming with filters and auto-scroll',
+          'Animated PNGTuber avatar with 15+ emotional states, TTS lip-sync, and inference-driven reactions',
+          'Telegram and Discord messaging integration',
+        ],
+      },
+      {
+        type: 'stack',
+        heading: "How it's built",
+        items: [
+          'Vue 3 + TypeScript frontend with scoped styles and CSS custom properties',
+          'NestJS backend with Socket.IO for real-time status updates',
+          'Dockerode wraps Docker Engine API for container orchestration',
+          'nvidia-smi integration for VRAM monitoring',
+          'PixiJS and pixi-live2d-display for animated avatar rendering',
+          'WebSocket composables pattern for shared state management',
+        ],
+      },
+      {
+        type: 'reflection',
+        heading: 'What I learned',
+        items: [
+          'Real-time dashboards need careful state management — WebSocket reconnection logic, stale data handling, and optimistic UI updates matter more than you think.',
+          'Building for yourself means you can prioritize personality over polish. The avatar turned a monitoring tool into something with character.',
+          'Docker API abstraction via Dockerode is powerful but opinionated — understanding the raw Engine API helped debug edge cases.',
+        ],
+      },
+    ],
+  },
+
   hibiki: {
     title: 'Hibiki',
     github: 'https://github.com/PhyberApex/hibiki',

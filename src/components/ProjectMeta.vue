@@ -7,7 +7,7 @@
         class="pmeta-gh"
         target="_blank"
         rel="noopener noreferrer"
-      >→ GitHub</a>
+      >→ {{ linkLabel }}</a>
 
       <div v-if="tech" class="pmeta-stack" aria-label="Tech stack">
         <span v-for="t in techList" :key="t" class="pmeta-tag">{{ t }}</span>
@@ -40,6 +40,11 @@ const statusClass = computed(() => {
   if (s === 'active')     return 'active'
   if (s === 'maintained') return 'maintained'
   return 'archived'
+})
+
+const linkLabel = computed(() => {
+  if (!props.github) return 'View'
+  return props.github.includes('github.com') ? 'GitHub' : 'Docs'
 })
 </script>
 

@@ -6,6 +6,16 @@ export const STATUS_LABELS = {
 
 export const PROJECTS = [
   {
+    slug: 'karakuri',
+    name: 'Karakuri',
+    tagline: 'LLM control panel for GPU service orchestration on Raspberry Pi.',
+    detail: 'からくり — mechanical puppet. Homelab dashboard managing AI services (llama-server, Qwen3-TTS, ComfyUI image gen). Live CPU/RAM/VRAM monitoring, model management, animated PNGTuber avatar with TTS. Built for tinkering.',
+    stack: ['Vue 3', 'NestJS', 'Socket.IO', 'Docker'],
+    status: 'active',
+    featured: true,
+    url: 'https://karakuri.phyberapex.de/docs/',
+  },
+  {
     slug: 'hibiki',
     name: 'Hibiki',
     tagline: 'Electron app to use as discord music bot.',
