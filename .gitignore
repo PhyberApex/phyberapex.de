@@ -2,4 +2,8 @@
 /node_modules/
 # IDE
 .idea
-dist
+dist.claude/progress.json
+# Environment variables
+.env
+.env.local
+.env.*.local

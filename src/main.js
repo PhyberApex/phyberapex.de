@@ -3,5 +3,8 @@ import router from './router.js'
 import App from './App.vue'
 import './styles/global.scss'
 import './styles/prose.scss'
+import { initUmami } from './utils/analytics.js'
+
+initUmami()
 
 createApp(App).use(router).mount('#app')
