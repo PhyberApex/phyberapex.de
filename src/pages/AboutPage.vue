@@ -216,9 +216,9 @@ const QUESTS = [
 ]
 
 const PARTY = [
-  { name: 'Scientist/Sidekick (Multiclass)', caption: 'Morty (dog) cosplaying Rick while I cosplay Morty (human). Ontological crisis optional.', photo: '/images/morty1.jpg', rot: -2, role: null, note: null },
+  { name: 'Scientist/Sidekick (Multiclass)', caption: 'Morty (dog) cosplaying Rick while I cosplay Morty (human). Ontological crisis optional.', photo: '/images/morty3.jpg', rot: -2, role: null, note: null },
   { name: 'Ranger/Beast (Wildshape)', caption: 'Little Red Riding Hood meets her "grandmother." No wolves were harmed in this photoshoot.', photo: '/images/morty2.jpeg', rot: 1.5, role: null, note: null },
-  { name: 'Trainer/Companion (Pokémon AU)', caption: 'Ash Ketchum energy, Pikachu compliance issues. 10/10 would choose again.', photo: '/images/morty3.jpg', rot: -1, role: null, note: null },
+  { name: 'Trainer/Companion (Pokémon AU)', caption: 'Ash Ketchum energy, Pikachu compliance issues. 10/10 would choose again.', photo: '/images/morty1.jpg', rot: -1, role: null, note: null },
   { name: 'The Family', caption: null, photo: null, rot: 0,
     role: 'Wife · Son · Young Child',
     note: 'Support party. Healers. The reason to ship clean code.' },
