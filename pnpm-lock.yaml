@@ -17,7 +17,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^6.0.0
-        version: 6.0.8(vite@8.3.0(sass-embedded@1.104.1)(sass@1.104.0)(yaml@2.9.0))(vue@3.5.42)
+        version: 6.0.9(vite@8.3.0(sass-embedded@1.104.1)(sass@1.104.0)(yaml@2.9.0))(vue@3.5.42)
       sass-embedded:
         specifier: ^1.98.0
         version: 1.104.1
@@ -475,8 +475,8 @@ packages:
   '@rolldown/pluginutils@1.0.1':
     resolution: {integrity: sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw==}
 
-  '@vitejs/plugin-vue@6.0.8':
-    resolution: {integrity: sha512-0ZjgOg7oO6farnNGup7yvoM/YXZV84OZxHAwtflItNa/6zzQyVb5LNxyea3FEKEX2XlagIKzrlH7wwxkKgtiew==}
+  '@vitejs/plugin-vue@6.0.9':
+    resolution: {integrity: sha512-rD/MORlhaZMlXWW0rEn4FB4wMinWC0z/D7Ye160S5+Rs1mC8ZDAdcDp4SjKfUhG5t8q1ktcPVw4xuTkPRlzrSA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
@@ -1617,7 +1617,7 @@ snapshots:
 
   '@rolldown/pluginutils@1.0.1': {}
 
-  '@vitejs/plugin-vue@6.0.8(vite@8.3.0(sass-embedded@1.104.1)(sass@1.104.0)(yaml@2.9.0))(vue@3.5.42)':
+  '@vitejs/plugin-vue@6.0.9(vite@8.3.0(sass-embedded@1.104.1)(sass@1.104.0)(yaml@2.9.0))(vue@3.5.42)':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
       vite: 8.3.0(sass-embedded@1.104.1)(sass@1.104.0)(yaml@2.9.0)
